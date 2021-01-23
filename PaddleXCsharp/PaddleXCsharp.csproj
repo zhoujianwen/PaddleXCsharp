@@ -155,6 +155,7 @@
     <Compile Include="SingleCamera.Designer.cs">
       <DependentUpon>SingleCamera.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsbDeviceSource.cs" />
     <EmbeddedResource Include="DoubleCamera.resx">
       <DependentUpon>DoubleCamera.cs</DependentUpon>
     </EmbeddedResource>

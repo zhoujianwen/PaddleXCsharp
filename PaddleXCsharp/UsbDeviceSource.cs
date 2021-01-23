@@ -79,19 +79,20 @@ namespace PaddleXCsharp
                     //启动USB相机
                     this.videoSource = new VideoCaptureDevice(videoDevices[0].MonikerString);
                     videoSource.NewFrame += new NewFrameEventHandler(show_video);
-                    videoSource.Start();
                     videoSourcePlayer.VideoSource = videoSource;
+                    videoSource.Start();
+                    //Func<bool> delFunc = () => {
 
-                    Func<bool> delFunc = () => {
-                        videoSourcePlayer.Start();
-                        return true;
-                    };
-                    IAsyncResult result = delFunc.BeginInvoke(null, null);
-                    while (!result.IsCompleted)
-                    {
-                        DeviceExist = false;
-                    }
-                    DeviceExist = delFunc.EndInvoke(result);
+                    //    videoSourcePlayer.Invoke(new Action(delegate () {  }));
+                    //    return true;
+                    //};
+                    //IAsyncResult result = delFunc.BeginInvoke(null, null);
+                    //while (!result.IsCompleted)
+                    //{
+                    //    DeviceExist = false;
+                    //}
+                    //DeviceExist = delFunc.EndInvoke(result);
+                    DeviceExist = true;
                     return DeviceExist;
                 }
                 catch
@@ -103,19 +104,50 @@ namespace PaddleXCsharp
         }
 
         //新帧的触发函数
+        SingleCamera singleCamera;
         private void show_video(object sender, NewFrameEventArgs eventArgs)
         {
          
             Bitmap bitmap = eventArgs.Frame;  //获取到一帧图像
-            SingleCamera singleCamera = ((SingleCamera)LoginForm.listForm["SingleCamera"]);
-            singleCamera.pictureBox1.Image = Image.FromHbitmap(bitmap.GetHbitmap());
+            singleCamera = ((SingleCamera)LoginForm.listForm["SingleCamera"]);
+            singleCamera.pictureBox1.Invoke(new Action(delegate () { singleCamera.pictureBox1.Image = Image.FromHbitmap(bitmap.GetHbitmap());}));
+            //不建议跨线程访问，上下文频繁切换造成资源开销严重，将show_video方法迁移至SingleCamera.cs文件内实现。
             //if (is_record_video)
             //{
             //    writer.WriteVideoFrame(bitmap);
             //}
-            
+
         }
 
+        System.Drawing.Bitmap tbmp;
+        private void VideoDev_NewFrame(object sender, ref Bitmap image)
+        {
+            if (is_record_video)
+            {
+                tbmp = this.videoSourcePlayer.GetCurrentVideoFrame();
+                //videoWriter.WriteVideoFrame(bmp1);
+            }
+        }
+        //计时器响应函数
+        public void tick_count(object source, System.Timers.ElapsedEventArgs e)
+        {
+            tick_num++;
+            int temp = tick_num;
+
+            int sec = temp % 60;
+
+            int min = temp / 60;
+            if (60 == min)
+            {
+                min = 0;
+                min++;
+            }
+
+            int hour = min / 60;
+
+            String tick = hour.ToString() + "：" + min.ToString() + "：" + sec.ToString();
+            //this.label4.Text = tick;
+        }
 
     }
 }

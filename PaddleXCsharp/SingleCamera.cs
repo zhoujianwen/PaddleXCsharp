@@ -45,85 +45,7 @@ namespace PaddleXCsharp
 
         /* ================================= USB相机 ================================= */
 
-        private FilterInfoCollection videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice); //枚举所有摄像头设备
-        private VideoCaptureDevice videoSource = new VideoCaptureDevice();   //视频的来源选择
-        private VideoSourcePlayer videoSourcePlayer = new AForge.Controls.VideoSourcePlayer();  //AForge控制控件
-        //private VideoFileWriter writer = new VideoFileWriter();   //写入到视频
-        private bool is_record_video = false;  //是否开始录像
-        AForge.Video.DirectShow.CameraControlFlags camctrlflag;//相机参数获取
-        private System.Timers.Timer timer_count;
-        int tick_num = 0;
-        bool DeviceExist = false;
-        private bool initUsbCamera()
-        {
-            if (videoDevices.Count == 0)
-            {
-                throw new ApplicationException(); //没有找到摄像头设备
-            }
-            foreach (FilterInfo device in videoDevices)
-            {
-               //do something
-            }
-            //秒表
-            this.timer_count = new System.Timers.Timer();  //实例化Timer类，设置间隔时间为10000毫秒；
-            this.timer_count.Elapsed += new System.Timers.ElapsedEventHandler(tick_count);  //到达时间的时候执行事件；
-            this.timer_count.AutoReset = true;  //设置是执行一次（false）还是一直执行(true)；
-            this.timer_count.Interval = 1000;
-            if (videoDevices.Count >0)
-            {
-                this.videoSource = new VideoCaptureDevice(videoDevices[0].MonikerString);
-                videoSource.NewFrame += new NewFrameEventHandler(show_video);
-                videoSource.Start();
-                videoSourcePlayer.VideoSource = videoSource;
-                //videoSourcePlayer.Start();
-                //this.label5.Text = "连接中...";
-                //this.label5.Visible = true;
-                //isshowed = true;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        
-        //新帧的触发函数
-        private void show_video(object sender, NewFrameEventArgs eventArgs)
-        {
-            if (DeviceExist)
-            {
-                //this.label5.Visible = false;
-                DeviceExist = false;
-            }
-            Bitmap bitmap = eventArgs.Frame;  //获取到一帧图像
-            pictureBox1.Image = Image.FromHbitmap(bitmap.GetHbitmap());
-            //if (is_record_video)
-            //{
-            //    writer.WriteVideoFrame(bitmap);
-            //}
-        }
-
-        //计时器响应函数
-        public void tick_count(object source, System.Timers.ElapsedEventArgs e)
-        {
-            tick_num++;
-            int temp = tick_num;
-
-            int sec = temp % 60;
-
-            int min = temp / 60;
-            if (60 == min)
-            {
-                min = 0;
-                min++;
-            }
-
-            int hour = min / 60;
-
-            String tick = hour.ToString() + "：" + min.ToString() + "：" + sec.ToString();
-            //this.label4.Text = tick;
-        }
+        private UsbDeviceSource usbDeviceSource = new UsbDeviceSource(); 
 
 
         // 用于从驱动获取图像的缓存
@@ -280,12 +202,11 @@ namespace PaddleXCsharp
                 try
                 {
                     // 返回相机数量
-                    int cameraNum = videoDevices.Count;
+                    int cameraNum = usbDeviceSource.videoDevices.Count;
                     // 枚举相机
-                    var items = videoDevices.GetEnumerator();
-                    while (items.MoveNext())
+                    foreach (FilterInfo device in usbDeviceSource.videoDevices)
                     {
-                        cbDeviceList.Items.Add(((FilterInfo)items).Name);
+                        cbDeviceList.Items.Add(device.Name);
                     }
                     //https://www.cnblogs.com/xiaoliangge/p/6006055.html
                     // 选择第一项
@@ -394,27 +315,21 @@ namespace PaddleXCsharp
             }
             else if((!chooseBasler) && (!chooseHIK))
             {
-                try
+                //启动USB相机
+
+                if (usbDeviceSource.open())
                 {
-                    //启动USB相机
-                    this.videoSource = new VideoCaptureDevice(videoDevices[0].MonikerString);
-                    videoSource.NewFrame += new NewFrameEventHandler(show_video);
-                    videoSource.Start();
-                    videoSourcePlayer.VideoSource = videoSource;
-                    this.BeginInvoke(new Action(delegate ()
-                    {
-                        videoSourcePlayer.Start();
-                    }));
                     // 获取参数
                     BnGetParam_Click(null, null);
                     // 控件操作
                     SetCtrlWhenOpen();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("打开相机失败！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("打开相机失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
             }
         }
 
@@ -471,24 +386,21 @@ namespace PaddleXCsharp
             }
             else if ((!chooseBasler) && (!chooseHIK))
             {
-                try
-                {
-
                     //关闭USB相机
 
-                    this.BeginInvoke(new Action(delegate () { videoSourcePlayer.Stop(); }));
+                    if (usbDeviceSource.close())
+                    {
+                        // 控件操作
+                        SetCtrlWhenClose();
 
-                    // 控件操作
-                    SetCtrlWhenClose();
-
-                    // 清空pictureBox
-                    this.pictureBox1.Image = null;
-                }
-                catch
-                {
-                    MessageBox.Show("关闭相机失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                        // 清空pictureBox
+                        this.pictureBox1.Image = null;
+                    }
+                    else {
+                        MessageBox.Show("关闭相机失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+               
             }
         }
 
@@ -697,8 +609,8 @@ namespace PaddleXCsharp
             else if ((!chooseBasler) && (!chooseHIK))
             {
                 int _exposure, _gain;
-                videoSource.GetCameraProperty(CameraControlProperty.Exposure, out _exposure, out camctrlflag);
-                videoSource.GetCameraProperty(CameraControlProperty.Zoom, out _gain, out camctrlflag);
+                this.usbDeviceSource.videoSource.GetCameraProperty(CameraControlProperty.Exposure, out _exposure, out this.usbDeviceSource.camctrlflag);
+                this.usbDeviceSource.videoSource.GetCameraProperty(CameraControlProperty.Zoom, out _gain, out this.usbDeviceSource.camctrlflag);
                 this.tbGain.Text = _gain.ToString();
                 this.tbExposure.Text = _exposure.ToString();
             }
@@ -726,10 +638,10 @@ namespace PaddleXCsharp
                 tbExposure.Text = exposureshow;
             } else if ((!chooseHIK) && (!chooseBasler)) {
                 
-                bool a = videoSource.SetCameraProperty(
+                bool a = this.usbDeviceSource.videoSource.SetCameraProperty(
                  CameraControlProperty.Exposure, int.Parse(tbExposure.Text.Trim()),
                  CameraControlFlags.Manual);
-                bool b = videoSource.SetCameraProperty(
+                bool b = this.usbDeviceSource.videoSource.SetCameraProperty(
                  CameraControlProperty.Zoom, int.Parse(tbGain.Text.Trim()),
                  CameraControlFlags.Manual);
                 MessageBox.Show(a+" "+b);
