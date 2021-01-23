@@ -402,7 +402,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.ComboBox cameraType;
         private System.Windows.Forms.Button bnClose;
         private System.Windows.Forms.GroupBox groupBox3;

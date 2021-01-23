@@ -285,7 +285,7 @@ namespace PaddleXCsharp
                     var items = videoDevices.GetEnumerator();
                     while (items.MoveNext())
                     {
-                        cbDeviceList.Items.Add(items.Current);
+                        cbDeviceList.Items.Add(((FilterInfo)items).Name);
                     }
                     //https://www.cnblogs.com/xiaoliangge/p/6006055.html
                     // 选择第一项
