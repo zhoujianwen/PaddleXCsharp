@@ -6,6 +6,7 @@
 # µÚÈý·½DLL
 *.zip
 AForge.NET Framework-2.2.5-(libs only)/
+paddlex_inference.dll
 
 # User-specific files
 *.rsuser
