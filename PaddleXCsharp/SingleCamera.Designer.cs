@@ -48,6 +48,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.usblabelinfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cameraType = new System.Windows.Forms.ComboBox();
             this.bnClose = new System.Windows.Forms.Button();
@@ -133,7 +134,7 @@
             this.bnSaveImage.TabIndex = 16;
             this.bnSaveImage.Text = "保存图片";
             this.bnSaveImage.UseVisualStyleBackColor = true;
-            this.bnSaveImage.Click += new System.EventHandler(this.BnSaveImage_Click);
+            this.bnSaveImage.Click += new System.EventHandler(this.bnSaveImage_Click);
             // 
             // bnStopDetection
             // 
@@ -275,6 +276,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.usblabelinfo);
             this.groupBox4.Controls.Add(this.pictureBox1);
             this.groupBox4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox4.Location = new System.Drawing.Point(12, 35);
@@ -283,6 +285,16 @@
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "检测界面";
+            // 
+            // usblabelinfo
+            // 
+            this.usblabelinfo.AutoSize = true;
+            this.usblabelinfo.Location = new System.Drawing.Point(20, 31);
+            this.usblabelinfo.Name = "usblabelinfo";
+            this.usblabelinfo.Size = new System.Drawing.Size(63, 14);
+            this.usblabelinfo.TabIndex = 28;
+            this.usblabelinfo.Text = "加载显示";
+            this.usblabelinfo.Visible = false;
             // 
             // pictureBox1
             // 
@@ -377,6 +389,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -410,5 +423,6 @@
         private System.Windows.Forms.Button bnOpen;
         private System.Windows.Forms.TextBox tbModeltype;
         private System.Windows.Forms.Button bnThreshold;
+        private System.Windows.Forms.Label usblabelinfo;
     }
 }

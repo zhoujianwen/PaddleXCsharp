@@ -41,11 +41,31 @@ namespace PaddleXCsharp
         Thread hikGrabThread = null;
          
         bool hikCanGrab = false;  // 控制相机是否Grab
-        bool chooseHIK = false;           // 海康相机打开标志
+        bool chooseHIK = false;   // 海康相机打开标志
 
         /* ================================= USB相机 ================================= */
-
-        private UsbDeviceSource usbDeviceSource = new UsbDeviceSource(); 
+        private UsbDeviceSource usbDeviceSource = new UsbDeviceSource();
+        bool usbCanGrab = false;  // 控制USB相机是否Grab
+        bool chooseUSB = false;   // USB相机打开标志
+        Thread usbGrabThread = null;
+        /// <summary>
+        /// 同步事件，新帧的触发函数
+        /// 20190515 by hanfre 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="NewFrameEventArgs"></param>
+        Bitmap bitmap = null;
+        private void show_video(object sender, NewFrameEventArgs eventArgs)
+        {
+            bitmap = (Bitmap)eventArgs.Frame.Clone();  //获取到一帧图像
+            this.pictureBox1.Image = bitmap;//Image.FromHbitmap(bitmap.GetHbitmap()); 
+            //不建议跨线程访问，上下文频繁切换造成资源开销严重，将show_video方法迁移至SingleCamera.cs文件内实现。
+            //if (is_record_video)
+            //{
+            //    writer.WriteVideoFrame(bitmap);
+            //}
+        }
+        
 
 
         // 用于从驱动获取图像的缓存
@@ -127,6 +147,7 @@ namespace PaddleXCsharp
             {
                 chooseHIK = false;
                 chooseBasler = false;
+                chooseUSB = true;
                 DeviceListAcq();
             }    
         }
@@ -135,6 +156,7 @@ namespace PaddleXCsharp
         private void DeviceListAcq()
         {
             // 清空列表
+            cbDeviceList.DataSource = null;
             cbDeviceList.Items.Clear();
             System.GC.Collect();
 
@@ -196,23 +218,34 @@ namespace PaddleXCsharp
                     return;
                 }
             }
-            else
+            else if((chooseUSB)&&(!chooseHIK)&&(!chooseBasler))
             {
                 // 枚举USB相机
                 try
                 {
-                    // 返回相机数量
-                    int cameraNum = usbDeviceSource.videoDevices.Count;
-                    // 枚举相机
-                    foreach (FilterInfo device in usbDeviceSource.videoDevices)
+
+                    //连接相机
+                    usbDeviceSource.initCamera();
+                    usbDeviceSource.callBackHandler += show_video; //回调函数处理视频帧
+                    if (usbDeviceSource.DeviceExist)
                     {
-                        cbDeviceList.Items.Add(device.Name);
+                        // 返回相机数量
+                        int cameraNum = usbDeviceSource.videoDevices.Count;
+                        // 枚举相机
+                        //foreach (FilterInfo device in usbDeviceSource.videoDevices)
+                        //{
+                        cbDeviceList.DataSource = usbDeviceSource.items;
+                        //}
+                        //https://www.cnblogs.com/xiaoliangge/p/6006055.html
+                        // 选择第一项
+                        if (cameraNum != 0)
+                        {
+                            cbDeviceList.SelectedIndex = 0;
+                        }
                     }
-                    //https://www.cnblogs.com/xiaoliangge/p/6006055.html
-                    // 选择第一项
-                    if (cameraNum != 0)
-                    {
-                        cbDeviceList.SelectedIndex = 0;
+                    else {
+                        cbDeviceList.DataSource = usbDeviceSource.items;
+                        throw new Exception();
                     }
                 }
                 catch
@@ -235,6 +268,7 @@ namespace PaddleXCsharp
             tbGain.Enabled = true;
             bnGetParam.Enabled = true;
             bnSetParam.Enabled = true;
+            usblabelinfo.Visible = false ;
         }
         private void SetCtrlWhenClose()
         {
@@ -250,7 +284,7 @@ namespace PaddleXCsharp
             bnStartDetection.Enabled = false;
             bnStopDetection.Enabled = false;
             bnSaveImage.Enabled = false;
-
+            usblabelinfo.Visible = false;
         }
         private void SetCtrlWhenStartGrab()
         {
@@ -313,23 +347,49 @@ namespace PaddleXCsharp
                     return;
                 }
             }
-            else if((!chooseBasler) && (!chooseHIK))
+            else if(chooseUSB&&(!chooseBasler) && (!chooseHIK))
             {
                 //启动USB相机
+                Func<bool> delFunc = () => { return usbDeviceSource.open();  };
+                IAsyncResult result = delFunc.BeginInvoke(null, null);
 
-                if (usbDeviceSource.open())
+                int count = 0;
+                /*
+                 result.IsCompleted可以判断异步委托是否执行完成，执行完成返回true
+                 WaitOne方法自定义一个等待时间，如果在这个等待时间内异步委托没有执行完成，那么就会执行 while里面的主线程的逻辑，反之就不会执行。
+                https://zhoujianwen.blog.csdn.net/article/details/112385180
+                 */
+                this.usblabelinfo.Text = "正在启动USB相机";
+                this.usblabelinfo.Visible = true;
+                while (!result.AsyncWaitHandle.WaitOne(500))
+                {
+                    // 询问是否完成操作，否则做其它事情。
+                    if (count < 3)
+                    {
+                        this.usblabelinfo.Text += ".";
+                    }
+                    else
+                    {
+                        count = 0;
+                        this.usblabelinfo.Text = "正在启动USB相机";
+                    }
+                    count++;
+                }
+
+                if (delFunc.EndInvoke(result))
                 {
                     // 获取参数
                     BnGetParam_Click(null, null);
                     // 控件操作
                     SetCtrlWhenOpen();
+                    usbCanGrab = true;
                 }
                 else
                 {
+                    this.usblabelinfo.Visible = false;
                     MessageBox.Show("打开相机失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
             }
         }
 
@@ -384,23 +444,50 @@ namespace PaddleXCsharp
                     return;
                 }
             }
-            else if ((!chooseBasler) && (!chooseHIK))
+            else if (chooseUSB&&(!chooseBasler) && (!chooseHIK))
             {
-                    //关闭USB相机
+                //关闭USB相机
+                if (usbCanGrab)
+                {
+                    usbCanGrab = false;
+                    this.usblabelinfo.Text = "正在关闭usb相机";
+                    this.usblabelinfo.Visible = true;
+                    Func<bool> delFunc = () => { return usbDeviceSource.close(); };
+                    IAsyncResult result = delFunc.BeginInvoke(null, null);
 
-                    if (usbDeviceSource.close())
+                    int count = 0;
+                    while (!result.AsyncWaitHandle.WaitOne(500))
+                    {
+                        // 询问是否完成操作，否则做其它事情。
+                        if (count < 3)
+                        {
+                            this.usblabelinfo.Text += ".";
+                        }
+                        else
+                        {
+                            count = 0;
+                            this.usblabelinfo.Text = "正在关闭USB相机";
+                        }
+                        count++;
+                    }
+
+                    //获取异步操作结果
+                    if (delFunc.EndInvoke(result))
                     {
                         // 控件操作
                         SetCtrlWhenClose();
-
                         // 清空pictureBox
                         this.pictureBox1.Image = null;
                     }
-                    else {
+                    else
+                    {
                         MessageBox.Show("关闭相机失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-               
+                }
+                else { 
+                    //do something!
+                }
             }
         }
 
@@ -489,8 +576,17 @@ namespace PaddleXCsharp
                     }
                 }
             }
-            else { 
-                    //usb相机
+            else {
+                //usb相机
+                //Bitmap bitmap = ?;
+                // 是否进行推理
+                if (isInference) { bitmap = Inference(bitmap); }
+                if (pictureBox1.InvokeRequired)  // 当一个控件的InvokeRequired属性值为真时，说明有一个创建它以外的线程想访问它
+                {
+                    UpdateUI update = delegate { pictureBox1.Image = bitmap; };
+                    pictureBox1.BeginInvoke(update);
+                }
+                else { pictureBox1.Image = bitmap; }
             }
         }
         
@@ -545,6 +641,25 @@ namespace PaddleXCsharp
             } else if ((!chooseBasler) && (!chooseHIK))
             {
                 //USB开始采集
+                try
+                {
+                    // 标志符号
+                    usbCanGrab = true;
+                    // 开始Grab
+                    usbDeviceSource.StartGrabbing();
+                    // 用线程更新显示
+                    usbGrabThread = new Thread(GrabThreadProcess);
+                    baslerGrabThread.Start();
+                    // 控件操作
+                    SetCtrlWhenStartGrab();
+                }
+                catch
+                {
+                    usbCanGrab = false;
+                    usbGrabThread.Join(); ;
+                    MessageBox.Show("开始采集失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
         }
 
@@ -580,9 +695,20 @@ namespace PaddleXCsharp
                     MessageBox.Show("停止采集失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-            } else if ((!chooseBasler) && (!chooseHIK))
+            } else if (chooseUSB && (!chooseBasler) && (!chooseHIK))
             {
-                    //usb相机停止采集
+                try
+                {
+                    usbCanGrab = false;  // 标志位设为false
+                    usbGrabThread.Join();  // 主线程阻塞，等待线程结束
+                    usbDeviceSource.StopGrabbing();  // 停止采集
+                    SetCtrlWhenStopGrab();  // 控件操作
+                }
+                catch
+                {
+                    MessageBox.Show("停止采集失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
         }
 
@@ -606,7 +732,7 @@ namespace PaddleXCsharp
                 tbGain.Text = gain;
                 tbExposure.Text = exposure;
             }
-            else if ((!chooseBasler) && (!chooseHIK))
+            else if (chooseUSB && (!chooseBasler) && (!chooseHIK))
             {
                 int _exposure, _gain;
                 this.usbDeviceSource.videoSource.GetCameraProperty(CameraControlProperty.Exposure, out _exposure, out this.usbDeviceSource.camctrlflag);
@@ -636,15 +762,16 @@ namespace PaddleXCsharp
                 // 显示真实值
                 tbGain.Text = gainshow;
                 tbExposure.Text = exposureshow;
-            } else if ((!chooseHIK) && (!chooseBasler)) {
+            } else if (chooseUSB && (!chooseBasler) && (!chooseHIK))
+            {
                 
                 bool a = this.usbDeviceSource.videoSource.SetCameraProperty(
                  CameraControlProperty.Exposure, int.Parse(tbExposure.Text.Trim()),
-                 CameraControlFlags.Manual);
-                bool b = this.usbDeviceSource.videoSource.SetCameraProperty(
-                 CameraControlProperty.Zoom, int.Parse(tbGain.Text.Trim()),
-                 CameraControlFlags.Manual);
-                MessageBox.Show(a+" "+b);
+                 CameraControlFlags.Manual);//曝光值
+                //bool b = this.usbDeviceSource.videoSource.SetCameraProperty(
+                // CameraControlProperty.Zoom, int.Parse(tbGain.Text.Trim()),
+                // CameraControlFlags.Manual);
+                //MessageBox.Show(a+" "+b);
             }
         }
         #endregion
@@ -765,17 +892,16 @@ namespace PaddleXCsharp
             MessageBox.Show("调整阈值后，请重新加载模型！", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        // 保存图片
-        private void BnSaveImage_Click(object sender, EventArgs e)
-        {
-
-        }
-
         // 窗口关闭
         private void SingleCamera_FormClosing(object sender, FormClosingEventArgs e)
         {
             BnClose_Click(sender, e);
             System.Environment.Exit(0);
+        }
+
+        private void bnSaveImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
