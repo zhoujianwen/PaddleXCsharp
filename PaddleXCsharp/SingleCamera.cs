@@ -230,13 +230,14 @@ namespace PaddleXCsharp
                     if (usbDeviceSource.DeviceExist)
                     {
                         // 返回相机数量
-                        int cameraNum = usbDeviceSource.videoDevices.Count;
+                        int cameraNum = usbDeviceSource.CameraNum();
+
                         // 枚举相机
-                        //foreach (FilterInfo device in usbDeviceSource.videoDevices)
-                        //{
-                        cbDeviceList.DataSource = usbDeviceSource.items;
-                        //}
-                        //https://www.cnblogs.com/xiaoliangge/p/6006055.html
+                        foreach (FilterInfo device in usbDeviceSource.CameraEnum())
+                        {
+                            cbDeviceList.Items.Add(device.Name);
+                        }
+                        // https://www.cnblogs.com/xiaoliangge/p/6006055.html
                         // 选择第一项
                         if (cameraNum != 0)
                         {
@@ -350,7 +351,7 @@ namespace PaddleXCsharp
             else if(chooseUSB&&(!chooseBasler) && (!chooseHIK))
             {
                 //启动USB相机
-                Func<bool> delFunc = () => { return usbDeviceSource.open();  };
+                Func<bool> delFunc = () => { Thread.Sleep(5000); return usbDeviceSource.open();  };
                 IAsyncResult result = delFunc.BeginInvoke(null, null);
 
                 int count = 0;
@@ -364,14 +365,14 @@ namespace PaddleXCsharp
                 while (!result.AsyncWaitHandle.WaitOne(500))
                 {
                     // 询问是否完成操作，否则做其它事情。
-                    if (count < 3)
+                    if (count < 4)
                     {
                         this.usblabelinfo.Text += ".";
                     }
                     else
                     {
                         count = 0;
-                        this.usblabelinfo.Text = "正在启动USB相机";
+                        this.usblabelinfo.Text = "正在启动USB相机.";
                     }
                     count++;
                 }
@@ -449,17 +450,16 @@ namespace PaddleXCsharp
                 //关闭USB相机
                 if (usbCanGrab)
                 {
-                    usbCanGrab = false;
-                    this.usblabelinfo.Text = "正在关闭usb相机";
+                    this.usblabelinfo.Text = "正在关闭USB相机";
                     this.usblabelinfo.Visible = true;
-                    Func<bool> delFunc = () => { return usbDeviceSource.close(); };
+                    Func<bool> delFunc = () => { Thread.Sleep(5000); return usbDeviceSource.close(); };
                     IAsyncResult result = delFunc.BeginInvoke(null, null);
 
                     int count = 0;
                     while (!result.AsyncWaitHandle.WaitOne(500))
                     {
                         // 询问是否完成操作，否则做其它事情。
-                        if (count < 3)
+                        if (count < 4)
                         {
                             this.usblabelinfo.Text += ".";
                         }
@@ -478,6 +478,7 @@ namespace PaddleXCsharp
                         SetCtrlWhenClose();
                         // 清空pictureBox
                         this.pictureBox1.Image = null;
+                        usbCanGrab = false;
                     }
                     else
                     {
@@ -735,8 +736,8 @@ namespace PaddleXCsharp
             else if (chooseUSB && (!chooseBasler) && (!chooseHIK))
             {
                 int _exposure, _gain;
-                this.usbDeviceSource.videoSource.GetCameraProperty(CameraControlProperty.Exposure, out _exposure, out this.usbDeviceSource.camctrlflag);
-                this.usbDeviceSource.videoSource.GetCameraProperty(CameraControlProperty.Zoom, out _gain, out this.usbDeviceSource.camctrlflag);
+                this.usbDeviceSource.GetCameraProperty(CameraControlProperty.Exposure, out _exposure);
+                this.usbDeviceSource.GetCameraProperty(CameraControlProperty.Zoom, out _gain);
                 this.tbGain.Text = _gain.ToString();
                 this.tbExposure.Text = _exposure.ToString();
             }
@@ -765,7 +766,7 @@ namespace PaddleXCsharp
             } else if (chooseUSB && (!chooseBasler) && (!chooseHIK))
             {
                 
-                bool a = this.usbDeviceSource.videoSource.SetCameraProperty(
+                bool a = this.usbDeviceSource.SetCameraProperty(
                  CameraControlProperty.Exposure, int.Parse(tbExposure.Text.Trim()),
                  CameraControlFlags.Manual);//曝光值
                 //bool b = this.usbDeviceSource.videoSource.SetCameraProperty(

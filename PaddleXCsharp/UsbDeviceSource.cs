@@ -15,17 +15,20 @@ namespace PaddleXCsharp
 {
     class UsbDeviceSource
     {
-        public FilterInfoCollection videoDevices;//枚举所有摄像头设备
-        public VideoCaptureDevice videoSource; //视频的来源选择
-        public VideoSourcePlayer videoSourcePlayer ;  //AForge控制控件
+        // 版本
+        private static Version sfnc2_0_0 = new Version(2, 0, 0);
+
+        private FilterInfoCollection videoDevices;//枚举所有摄像头设备
+        private VideoCaptureDevice videoSource; //视频的来源选择
+        private VideoSourcePlayer videoSourcePlayer ;  //AForge控制控件
         //private VideoFileWriter writer;   //写入到视频
-        public bool is_record_video = false;  //是否开始录像
-        public AForge.Video.DirectShow.CameraControlFlags camctrlflag;//相机参数获取
-        public System.Timers.Timer timer_count;
-        public int tick_num = 0;
+        private bool is_record_video = false;  //是否开始录像
+        private AForge.Video.DirectShow.CameraControlFlags camctrlflag;//相机参数获取
+        private System.Timers.Timer timer_count;
+        private int tick_num = 0;
         public bool DeviceExist = false; //设备是否存在标志
         public NewFrameEventHandler callBackHandler;
-        FilterInfoCollection allCameraInfos;
+        private FilterInfoCollection allCameraInfos;
 
         public UsbDeviceSource() {
            //initCamera();
@@ -44,6 +47,18 @@ namespace PaddleXCsharp
         {
             // 相机个数
             return videoDevices;
+        }
+
+        // 设置相机参数
+        public void GetCameraProperty(CameraControlProperty a, out int b)
+        {
+            this.videoSource.GetCameraProperty(a, out b, out camctrlflag);
+        }
+
+        // 获取相机参数
+        public bool SetCameraProperty(CameraControlProperty property, int value, CameraControlFlags controlFlags) 
+        {
+            return this.videoSource.SetCameraProperty(property, value, controlFlags);
         }
 
         // 开始采集
