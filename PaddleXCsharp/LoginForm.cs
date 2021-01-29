@@ -6,7 +6,7 @@ namespace PaddleXCsharp
 {
     public partial class LoginForm : Form
     {
-        public static Dictionary<string, Form> listForm = new Dictionary<string, Form>();
+        //public static Dictionary<string, Form> listForm = new Dictionary<string, Form>();
         public LoginForm()
         {
             InitializeComponent();
@@ -18,14 +18,15 @@ namespace PaddleXCsharp
             {
                 this.Hide();
                 SingleCamera singleCamera = new SingleCamera();
-                listForm.Add("SingleCamera",singleCamera);
+                //listForm.Add("SingleCamera",singleCamera);
+                LogHelper.WriteLog("SingleCamera");
                 singleCamera.Show();
             }
             else if (radioButton2.Checked)
             {
                 this.Hide();
                 DoubleCamera doubleCamera = new DoubleCamera();
-                listForm.Add("DoubleCamera",doubleCamera);
+                //listForm.Add("DoubleCamera",doubleCamera);
                 doubleCamera.Show();
             }
             else if (radioButton3.Checked)

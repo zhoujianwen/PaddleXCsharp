@@ -1,6 +1,5 @@
-﻿using AForge.Controls;
-using AForge.Video;
-using AForge.Video.DirectShow;
+﻿
+
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -8,8 +7,14 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Accord.Video;
+using Accord.Video.DirectShow;
+using Accord.Controls;
+using System.Diagnostics;
+using System.Timers;
 
 namespace PaddleXCsharp
 {
@@ -19,22 +24,43 @@ namespace PaddleXCsharp
         private static Version sfnc2_0_0 = new Version(2, 0, 0);
 
         private FilterInfoCollection videoDevices;//枚举所有摄像头设备
+
         private VideoCaptureDevice videoSource; //视频的来源选择
-        private VideoSourcePlayer videoSourcePlayer ;  //AForge控制控件
-        //private VideoFileWriter writer;   //写入到视频
+
+        private List<VideoCaptureDevice> videoSourceList = new List<VideoCaptureDevice>();
+
+        public VideoSourcePlayer videoSourcePlayer ;  //AForge控制控件
+
         private bool is_record_video = false;  //是否开始录像
-        private AForge.Video.DirectShow.CameraControlFlags camctrlflag;//相机参数获取
-        private System.Timers.Timer timer_count;
+
+        private Accord.Video.DirectShow.CameraControlFlags camctrlflag;//相机参数获取
+
+
         private int tick_num = 0;
+
         public bool DeviceExist = false; //设备是否存在标志
+
         public NewFrameEventHandler callBackHandler;
+
+        public VideoSourcePlayer.NewFrameHandler videoSourcePlayerCallBackHandler;
+
         private FilterInfoCollection allCameraInfos;
 
-        public UsbDeviceSource() {
-           //initCamera();
-        }
+        private Stopwatch stopWatch = null;
 
-        public List<string> items;  //设备信息列表
+        private System.Timers.Timer timer;
+
+        public string fpsLabel = "";
+
+        //public List<string> items = new List<string>();  //设备信息列表
+
+        public UsbDeviceSource() {
+            //initCamera();
+            timer = new System.Timers.Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += new ElapsedEventHandler(timer_Tick);
+            timer.AutoReset = true;
+        }
 
         // 相机个数
         public int CameraNum()
@@ -43,9 +69,19 @@ namespace PaddleXCsharp
         }
 
         // 枚举相机
+        //public List<string> CameraEnum()
+        //{
+        //    items = new List<string>();
+        //    foreach (FilterInfo device in videoDevices)
+        //    {
+        //        items.Add(device.Name);
+        //    }
+        //    return items;
+        //}
+
+        // 枚举相机
         public FilterInfoCollection CameraEnum()
         {
-            // 相机个数
             return videoDevices;
         }
 
@@ -64,86 +100,138 @@ namespace PaddleXCsharp
         // 开始采集
         public void StartGrabbing()
         {
-            if (videoSource != null)
+            if (videoSource != null && !videoSource.IsRunning)
             {
-                //camera.StreamGrabber.Start();//
+                videoSource.Start();
             }
         }
 
         // 停止采集
         public void StopGrabbing()
         {
-            if (videoSource != null)
+            if (videoSource != null && videoSource.IsRunning)
             {
-                //camera.StreamGrabber.Stop();
+                this.videoSource.SignalToStop();
+                this.videoSource.WaitForStop();
             }
         }
 
-        //USB相机初始化
-        public void initCamera()
+        //USB相机初始化，查找USB相机设备
+        public FilterInfoCollection initCamera()
         {
             try
             {
                 if (videoDevices == null)
                 {
+                    //枚举所有视频输入设备
                     videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-                    videoSource = new VideoCaptureDevice();
-                    videoSourcePlayer = new AForge.Controls.VideoSourcePlayer();
-                    items = new List<string>();
-                    //writer = new VideoFileWriter();   
-                    if (videoDevices.Count == 0)
-                        throw new ApplicationException("没有发现USB摄像机！");
 
-                    foreach (FilterInfo device in videoDevices)
+                    // 添加设备到List，此处省略，在外部操作。
+
+                    if (videoDevices.Count != 0)
                     {
-                        items.Add(device.Name);
+                        DeviceExist = true;
+                        //throw new ApplicationException("没有发现USB相机！");
+                    }
+                    else {
+                        throw new ApplicationException();
                     }
                 }
-                DeviceExist = true;
             }
             catch (ApplicationException)
             {
                 DeviceExist = false;
-                items.Add("没有设备");
                 videoDevices = null;
             }
+            return videoDevices;
         }
 
+        // 多相机初始化
+        public List<VideoCaptureDevice> MultiCameraInit(int Num)
+        {
+            for (int i = 0; i < Num; i++)
+            {
+                videoSourceList.Add(new VideoCaptureDevice(videoDevices[i].MonikerString));
+                if (true == videoSourceList[i].IsRunning)
+                {
+                    videoSourceList[i].Stop();
+                }
+                //打开相机
+                videoSourceList[i].Start();
+            }
+            return this.videoSourceList;
+        }
+ 
         //关闭相机对象 
         public bool close()
         {
-            if (videoSource != null && videoSource.IsRunning)
+            //if (videoSource != null && videoSource.IsRunning)
+            //{
+            //    //videoSource.SignalToStop();
+            //    //videoSource = null;
+            //    videoSource.SignalToStop();
+            //    videoSource.WaitForStop();
+            //    //videoSourcePlayer.SignalToStop();
+            //    //videoSourcePlayer.WaitForStop();
+            //    System.GC.Collect();
+            //}
+            if (videoSource != null)
             {
                 videoSource.SignalToStop();
+
+                // wait ~ 3 seconds
+                for (int i = 0; i < 30; i++)
+                {
+                    if (!videoSource.IsRunning)
+                        break;
+                    System.Threading.Thread.Sleep(100);
+                }
+
+                if (videoSource.IsRunning)
+                {
+                    videoSource.Stop();
+                }
+
                 videoSource = null;
-                System.GC.Collect();
             }
+
             return true;
         }
 
+
         //打开相机
-        public bool open() {
+        public VideoCaptureDevice open(int selectIndex) {
             if (DeviceExist)
             {
                 close();
                 try
                 {
                     //启动USB相机
-                    this.videoSource = new VideoCaptureDevice(videoDevices[0].MonikerString);//连接摄像头
-                    videoSource.NewFrame += new NewFrameEventHandler(callBackHandler);//捕获画面事件
-                    videoSourcePlayer.VideoSource = videoSource;
-                    videoSource.Start();
+                    if (selectIndex < videoDevices.Count)
+                    {
+                        this.videoSource = new VideoCaptureDevice(videoDevices[selectIndex].MonikerString);//连接摄像头
+                        videoSourcePlayer = new VideoSourcePlayer();
+                        videoSource.NewFrame += new NewFrameEventHandler(callBackHandler);//捕获画面事件
+                        videoSourcePlayer.NewFrame += new Accord.Controls.VideoSourcePlayer.NewFrameHandler(videoSourcePlayerCallBackHandler);
+                        videoSourcePlayer.VideoSource = videoSource;
+                        videoSourcePlayer.Start();
+                        timer.Enabled = true;
+                        timer.Start();
+                        //videoSourcePlayer.Start();
+                    }
+                    else {
+                        throw new ApplicationException("打开相机失败！");
+                    }
                 }
                 catch
                 {
                     MessageBox.Show("打开相机失败！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
+                    return null;
                 }
             }
-            return true;
+            return this.videoSource;
         }
 
-       
 
         System.Drawing.Bitmap bitmap;
         private void VideoDev_NewFrame(object sender, ref Bitmap image)
@@ -169,6 +257,41 @@ namespace PaddleXCsharp
 
             bitmap.Save(Application.StartupPath + "\\" + fileName, ImageFormat.Jpeg);
             bitmap.Dispose();
+        }
+
+        private void MV_CC_GetOneFrameTimeout_NET(ref Bitmap stFrameInfo,int nMesc)
+        {
+            Thread.Sleep(nMesc);
+            stFrameInfo = this.videoSourcePlayer.GetCurrentVideoFrame();
+        }
+
+
+        // On timer event - gather statistics
+        private void timer_Tick(object sender, ElapsedEventArgs e)
+        {
+            IVideoSource videoSource = videoSourcePlayer.VideoSource;
+
+            if (videoSource != null)
+            {
+                // get number of frames since the last timer tick
+                int framesReceived = videoSource.FramesReceived;
+
+                if (stopWatch == null)
+                {
+                    stopWatch = new Stopwatch();
+                    stopWatch.Start();
+                }
+                else
+                {
+                    stopWatch.Stop();
+
+                    float fps = 1000.0f * framesReceived / stopWatch.ElapsedMilliseconds;
+                    fpsLabel = fps.ToString("F2") + " fps";
+
+                    stopWatch.Reset();
+                    stopWatch.Start();
+                }
+            }
         }
 
 
