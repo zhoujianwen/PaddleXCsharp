@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace PaddleXCsharp
@@ -19,6 +20,7 @@ namespace PaddleXCsharp
                 this.Hide();
                 SingleCamera singleCamera = new SingleCamera();
                 //listForm.Add("SingleCamera",singleCamera);
+                ConfigurationManager.GetSection("log4net");
                 LogHelper.WriteLog("SingleCamera");
                 singleCamera.Show();
             }
