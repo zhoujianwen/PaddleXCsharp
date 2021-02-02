@@ -128,6 +128,15 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\packages\Learun7.0.6\SqlServer\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="Learun.Cache.Base">
+      <HintPath>..\packages\Learun7.0.6\Cache\Learun.Cache.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Cache.Factory">
+      <HintPath>..\packages\Learun7.0.6\Cache\Learun.Cache.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Cache.Redis">
+      <HintPath>..\packages\Learun7.0.6\Cache\Learun.Cache.Redis.dll</HintPath>
+    </Reference>
     <Reference Include="Learun.DataBase">
       <HintPath>..\packages\Learun7.0.6\SqlServer\Learun.DataBase.dll</HintPath>
     </Reference>
@@ -163,6 +172,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Program Files (x86)\MVS\Development\DotNet\AnyCpu\MvCameraControl.Net.dll</HintPath>
     </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Learun7.0.6\Cache\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net461\OpenCvSharp.dll</HintPath>
     </Reference>
@@ -175,7 +189,17 @@
     <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net461\OpenCvSharp.UserInterface.dll</HintPath>
     </Reference>
+    <Reference Include="Pipelines.Sockets.Unofficial">
+      <HintPath>..\packages\Learun7.0.6\Cache\Pipelines.Sockets.Unofficial.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\packages\Learun7.0.6\Cache\StackExchange.Redis.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -216,6 +240,7 @@
       <DependentUpon>SingleCamera.cs</DependentUpon>
     </Compile>
     <Compile Include="UsbDeviceSource.cs" />
+    <Compile Include="User\UserEntity.cs" />
     <Compile Include="User\UserService.cs" />
     <EmbeddedResource Include="DoubleCamera.resx">
       <DependentUpon>DoubleCamera.cs</DependentUpon>

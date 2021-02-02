@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PaddleXCsharp.User;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Windows.Forms;
@@ -11,6 +12,10 @@ namespace PaddleXCsharp
         public LoginForm()
         {
             InitializeComponent();
+            this.textBox1.AutoSize = false;
+            this.textBox1.Height = 30;
+            this.textBox2.AutoSize = false;
+            this.textBox2.Height = 30;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -20,9 +25,18 @@ namespace PaddleXCsharp
                 this.Hide();
                 SingleCamera singleCamera = new SingleCamera();
                 //listForm.Add("SingleCamera",singleCamera);
-                ConfigurationManager.GetSection("log4net");
-                LogHelper.WriteLog("SingleCamera");
-                singleCamera.Show();
+                User.UserService test = new User.UserService();
+                UserEntity user = test.CheckLogin(this.textBox1.Text, this.textBox2.Text);
+                if (user.LoginOk)
+                {
+                    singleCamera.Show();
+                }
+                else {
+                    if (MessageBox.Show(user.LoginMsg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
             }
             else if (radioButton2.Checked)
             {
