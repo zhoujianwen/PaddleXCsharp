@@ -265,7 +265,7 @@ namespace PaddleXCsharp
             stFrameInfo = this.videoSourcePlayer.GetCurrentVideoFrame();
         }
 
-
+        int n = 0;
         // On timer event - gather statistics
         private void timer_Tick(object sender, ElapsedEventArgs e)
         {
@@ -287,7 +287,7 @@ namespace PaddleXCsharp
 
                     float fps = 1000.0f * framesReceived / stopWatch.ElapsedMilliseconds;
                     fpsLabel = fps.ToString("F2") + " fps";
-
+                    //fpsLabel = string.Format("ID:{0}", n++);
                     stopWatch.Reset();
                     stopWatch.Start();
                 }

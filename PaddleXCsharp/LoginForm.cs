@@ -12,10 +12,10 @@ namespace PaddleXCsharp
         public LoginForm()
         {
             InitializeComponent();
-            this.textBox1.AutoSize = false;
-            this.textBox1.Height = 30;
-            this.textBox2.AutoSize = false;
-            this.textBox2.Height = 30;
+            //this.textBox1.AutoSize = false;
+            //this.textBox1.Height = 30;
+            //this.textBox2.AutoSize = false;
+            //this.textBox2.Height = 30;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace PaddleXCsharp
                 SingleCamera singleCamera = new SingleCamera();
                 //listForm.Add("SingleCamera",singleCamera);
                 User.UserService test = new User.UserService();
-                UserEntity user = test.CheckLogin(this.textBox1.Text, this.textBox2.Text);
+                UserEntity user = test.CheckLogin(this.skinTextBox1.Text, this.skinTextBox1.Text);
                 if (user.LoginOk)
                 {
                     singleCamera.Show();

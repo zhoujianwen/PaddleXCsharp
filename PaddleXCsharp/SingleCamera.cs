@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using OpenCvSharp;
 using OpenCvSharp.Extensions;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 //USB相机
 #region  
@@ -58,38 +59,53 @@ namespace PaddleXCsharp
         /// <param name="sender"></param>
         /// <param name="NewFrameEventArgs"></param>
         Bitmap bitmap = null;
+        object mutex = new object();
+        int n = 0;
+        List<Bitmap> bitmapList = new List<Bitmap>();
         private void videoSourcePlayer_NewFrameReceived(object sender, NewFrameEventArgs eventArgs)
         {
-            //lock (this)
-            //{
-            //    bitmap = (Bitmap)eventArgs.Frame.Clone();  //获取一帧图像
+            lock (mutex)
+            {
+                bitmap = (Bitmap)eventArgs.Frame.Clone();  //获取一帧图像
 
-            //    if (isInference) { bitmap = Inference(bitmap); }
-            //    if (pictureBox1.InvokeRequired)  // 当一个控件的InvokeRequired属性值为真时，说明有一个创建它以外的线程想访问它
-            //    {
-            //        UpdateUI update = delegate { pictureBox1.Image = bitmap; };
-            //        pictureBox1.BeginInvoke(update);
-            //    }
-            //    else { 
-            //        pictureBox1.Image = bitmap; 
-            //    }
-            //}
-            
+                if (isInference) { bitmap = Inference(bitmap); }
+                if (pictureBox1.InvokeRequired)  // 当一个控件的InvokeRequired属性值为真时，说明有一个创建它以外的线程想访问它
+                {
+                    UpdateUI update = delegate {
+
+                        DateTime now = DateTime.Now;
+                        Graphics g = Graphics.FromImage(bitmap);
+                        // paint current time
+                        SolidBrush brush = new SolidBrush(Color.Red);
+                        g.DrawString(now.ToString(), this.Font, brush, new PointF(5, 5));
+                        g.DrawString(string.Format("ID:{0}", n++), this.Font, brush, new PointF(5, this.pictureBox1.Height - 200));
+                        this.pictureBox1.Image = bitmap;
+                        brush.Dispose();
+                        g.Dispose();
+                        
+                    };
+                    pictureBox1.BeginInvoke(update);
+                }
+                else
+                {
+                    pictureBox1.Image = bitmap;
+                }
+            }
         }
 
         // New frame received by the player
         private void videoSourcePlayer_NewFrame(object sender, ref Bitmap image)
         {
-            DateTime now = DateTime.Now;
-            Graphics g = Graphics.FromImage(image);
+            //DateTime now = DateTime.Now;
+            //Graphics g = Graphics.FromImage(image);
 
-            // paint current time
-            SolidBrush brush = new SolidBrush(Color.Red);
-            g.DrawString(now.ToString(), this.Font, brush, new PointF(5, 5));
-            g.DrawString(usbDeviceSource.fpsLabel, this.Font, brush, new PointF(5, this.pictureBox1.Height-200));
-            this.pictureBox1.Image = image;
-            brush.Dispose();
-            g.Dispose();
+            //// paint current time
+            //SolidBrush brush = new SolidBrush(Color.Red);
+            //g.DrawString(now.ToString(), this.Font, brush, new PointF(5, 5));
+            //g.DrawString(usbDeviceSource.fpsLabel, this.Font, brush, new PointF(5, this.pictureBox1.Height-200));
+            //this.pictureBox1.Image = image;
+            //brush.Dispose();
+            //g.Dispose();
         }
 
 
@@ -131,16 +147,16 @@ namespace PaddleXCsharp
         int mklThreadNum = 8; // 使用MKLDNN时，线程数量
         int gpuID = 0; // 使用GPU的ID号
         string key = ""; //模型解密密钥，此参数用于加载加密的PaddleX模型时使用
-        bool useIrOptim = false; // 是否加速模型后进行图优化
+        bool useIrOptim = true; // 是否加速模型后进行图优化
         bool visualize = false;
         bool isInference = false;  // 是否进行推理   
         IntPtr model; // 模型
 
         // 目标物种类，需根据实际情况修改！
-        string[] category = { "bocai", "changqiezi", "hongxiancai", "huluobo", "xihongshi", "xilanhua"};
+        string[] category = { "background", "xiaoduxiong"};
 
         // 定义CreatePaddlexModel接口
-        [DllImport("paddlex_inference.dll", EntryPoint = "CreatePaddlexModel", CharSet = CharSet.Ansi)]
+        [DllImport("detector.dll", EntryPoint = "CreatePaddlexModel", CharSet = CharSet.Ansi)]
         static extern IntPtr CreatePaddlexModel(ref int modelType, 
                                                 string modelPath, 
                                                 bool useGPU, 
@@ -156,8 +172,9 @@ namespace PaddleXCsharp
         static extern bool PaddlexClsPredict(IntPtr model, byte[] image, int height, int width, int channels, out int categoryID, out float score);
 
         // 定义检测接口
-        [DllImport("paddlex_inference.dll", EntryPoint = "PaddlexDetPredict", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("detector.dll", EntryPoint = "PaddlexDetPredict", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         static extern bool PaddlexDetPredict(IntPtr model, byte[] image, int height, int width, int channels, int max_box, float[] result, bool visualize);
+        
         #endregion
 
         //// 定义语义分割接口
@@ -772,16 +789,16 @@ namespace PaddleXCsharp
                 }
 
             } 
-            else if ((!chooseBasler) && (!chooseHIK))
+            else if (!chooseBasler && !chooseHIK && chooseUSB)
             {
                 //USB开始采集
                 try
                 {
                     // 标志符号
                     usbCanGrab = true;
-                    // 开始Grab
-                    //usbDeviceSource.StartGrabbing();
-                    // 用线程更新显示
+                    //// 开始Grab
+                    usbDeviceSource.StartGrabbing();
+                    //// 用线程更新显示
                     //usbGrabThread = new Thread(GrabThreadProcess);
                     //usbGrabThread.Start();
                     // 控件操作
@@ -834,10 +851,11 @@ namespace PaddleXCsharp
             {
                 try
                 {
-                    //usbCanGrab = false;  // 标志位设为false
+                    usbCanGrab = false;  // 标志位设为false
                     //usbGrabThread.Join();  // 主线程阻塞，等待线程结束
                     usbDeviceSource.StopGrabbing();  // 停止采集
                     SetCtrlWhenStopGrab();  // 控件操作
+                    isInference = false;
                 }
                 catch
                 {
@@ -912,20 +930,24 @@ namespace PaddleXCsharp
             }
         }
         #endregion
-
         // 加载模型
         private void BnLoadModel_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fileDialog = new FolderBrowserDialog();
-            fileDialog.Description = "请选择模型路径";
-            fileDialog.ShowNewFolderButton = false;
-            if (modelPath != "")
+            //FolderBrowserDialog fileDialog = new FolderBrowserDialog();
+            CommonOpenFileDialog fileDialog = new CommonOpenFileDialog();
+            fileDialog.IsFolderPicker = true;
+            //fileDialog.Description = "请选择模型路径";
+            //fileDialog.ShowNewFolderButton = false;
+            //if (modelPath != "")
+            //{
+            //    //fileDialog.file = modelPath;
+            //}
+
+            this.bnLoadModel.Enabled = false;
+            if (fileDialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                fileDialog.SelectedPath = modelPath;
-            }
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                modelPath = fileDialog.SelectedPath;
+                if(modelPath=="")
+                    modelPath = fileDialog.FileName;
                 MessageBox.Show("已选择模型路径:" + modelPath, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 model = CreatePaddlexModel(ref modelType, modelPath, useGPU, useTrt, useMkl, mklThreadNum, gpuID, key, useIrOptim);
@@ -940,6 +962,8 @@ namespace PaddleXCsharp
                 bnStopDetection.Enabled = true;
                 bnThreshold.Enabled = true;
             }
+            this.bnLoadModel.Enabled = true;
+
         }
 
         // 将Btimap类转换为byte[]类函数
@@ -987,18 +1011,26 @@ namespace PaddleXCsharp
             else if(modelType == 1)
             {
                 int max_box = 10;
-                float[] result = new float[max_box * 6 + 1];
-                bool res = PaddlexDetPredict(model, source, bmp.Height, bmp.Width, channel, max_box, result, visualize);
+                float[] result = new float[max_box * 6 +1];
+
+                bool res = PaddlexDetPredict(model, source, bmp.Height, bmp.Width, channel, max_box,result, visualize);
                 if (res)
                 {
                     Scalar color = new Scalar(255, 0, 0);
                     for (int i = 0; i < result[0]; i++)
                     {
+                        if (result[6 * i + 2] < 0.5)
+                        {
+                            continue;
+                        }
                         Rect rect = new Rect((int)result[6 * i + 3], (int)result[6 * i + 4], (int)result[6 * i + 5], (int)result[6 * i + 6]);
-                        Cv2.Rectangle(img, rect, color, 2, LineTypes.AntiAlias);
+                        Cv2.Rectangle(img, rect, color, 1, LineTypes.AntiAlias);
                         string text = category[(int)result[6 * i + 1]] + ": " + result[6 * i + 2].ToString("f2");
-                        Cv2.PutText(img, text, new OpenCvSharp.Point((int)result[6 * i + 3], (int)result[6 * i + 4] + 25), HersheyFonts.HersheyPlain, 2, Scalar.White);
+                        Cv2.PutText(img, text, new OpenCvSharp.Point((int)result[6 * i + 3], (int)result[6 * i + 4] + 25), HersheyFonts.HersheySimplex, 1, Scalar.Red);
                     }
+                }
+                else {
+                    LogHelper.WriteLog("产品ID检测失败！");
                 }
             }
 
