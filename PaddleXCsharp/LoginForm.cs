@@ -16,6 +16,7 @@ namespace PaddleXCsharp
             //this.textBox1.Height = 30;
             //this.textBox2.AutoSize = false;
             //this.textBox2.Height = 30;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Button1_Click(object sender, EventArgs e)
