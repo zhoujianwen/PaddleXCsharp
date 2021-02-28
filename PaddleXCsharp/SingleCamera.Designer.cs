@@ -48,7 +48,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.loadingCircle1 = new CNPOPSOFT.Controls.LoadingCircle();
             this.usblabelinfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cameraType = new System.Windows.Forms.ComboBox();
@@ -73,9 +72,9 @@
             this.groupBox5.Controls.Add(this.bnSaveImage);
             this.groupBox5.Controls.Add(this.bnStopDetection);
             this.groupBox5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox5.Location = new System.Drawing.Point(971, 529);
+            this.groupBox5.Location = new System.Drawing.Point(971, 562);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(243, 166);
+            this.groupBox5.Size = new System.Drawing.Size(243, 183);
             this.groupBox5.TabIndex = 40;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "检测操作";
@@ -84,7 +83,7 @@
             // 
             this.bnThreshold.Enabled = false;
             this.bnThreshold.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bnThreshold.Location = new System.Drawing.Point(15, 132);
+            this.bnThreshold.Location = new System.Drawing.Point(15, 140);
             this.bnThreshold.Name = "bnThreshold";
             this.bnThreshold.Size = new System.Drawing.Size(100, 25);
             this.bnThreshold.TabIndex = 42;
@@ -96,7 +95,7 @@
             // 
             this.tbModeltype.Enabled = false;
             this.tbModeltype.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbModeltype.Location = new System.Drawing.Point(131, 20);
+            this.tbModeltype.Location = new System.Drawing.Point(131, 28);
             this.tbModeltype.Name = "tbModeltype";
             this.tbModeltype.Size = new System.Drawing.Size(100, 23);
             this.tbModeltype.TabIndex = 41;
@@ -105,7 +104,7 @@
             // bnLoadModel
             // 
             this.bnLoadModel.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bnLoadModel.Location = new System.Drawing.Point(15, 20);
+            this.bnLoadModel.Location = new System.Drawing.Point(15, 28);
             this.bnLoadModel.Name = "bnLoadModel";
             this.bnLoadModel.Size = new System.Drawing.Size(100, 25);
             this.bnLoadModel.TabIndex = 13;
@@ -117,7 +116,7 @@
             // 
             this.bnStartDetection.Enabled = false;
             this.bnStartDetection.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bnStartDetection.Location = new System.Drawing.Point(15, 76);
+            this.bnStartDetection.Location = new System.Drawing.Point(15, 83);
             this.bnStartDetection.Name = "bnStartDetection";
             this.bnStartDetection.Size = new System.Drawing.Size(100, 25);
             this.bnStartDetection.TabIndex = 14;
@@ -129,7 +128,7 @@
             // 
             this.bnSaveImage.Enabled = false;
             this.bnSaveImage.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bnSaveImage.Location = new System.Drawing.Point(131, 132);
+            this.bnSaveImage.Location = new System.Drawing.Point(131, 140);
             this.bnSaveImage.Name = "bnSaveImage";
             this.bnSaveImage.Size = new System.Drawing.Size(100, 25);
             this.bnSaveImage.TabIndex = 16;
@@ -141,7 +140,7 @@
             // 
             this.bnStopDetection.Enabled = false;
             this.bnStopDetection.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bnStopDetection.Location = new System.Drawing.Point(131, 75);
+            this.bnStopDetection.Location = new System.Drawing.Point(131, 83);
             this.bnStopDetection.Name = "bnStopDetection";
             this.bnStopDetection.Size = new System.Drawing.Size(100, 25);
             this.bnStopDetection.TabIndex = 15;
@@ -153,7 +152,7 @@
             // 
             this.bnSetParam.Enabled = false;
             this.bnSetParam.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bnSetParam.Location = new System.Drawing.Point(131, 51);
+            this.bnSetParam.Location = new System.Drawing.Point(131, 79);
             this.bnSetParam.Name = "bnSetParam";
             this.bnSetParam.Size = new System.Drawing.Size(100, 25);
             this.bnSetParam.TabIndex = 8;
@@ -165,7 +164,7 @@
             // 
             this.bnGetParam.Enabled = false;
             this.bnGetParam.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bnGetParam.Location = new System.Drawing.Point(15, 51);
+            this.bnGetParam.Location = new System.Drawing.Point(15, 79);
             this.bnGetParam.Name = "bnGetParam";
             this.bnGetParam.Size = new System.Drawing.Size(100, 25);
             this.bnGetParam.TabIndex = 7;
@@ -177,7 +176,7 @@
             // 
             this.bnStopGrab.Enabled = false;
             this.bnStopGrab.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bnStopGrab.Location = new System.Drawing.Point(131, 6);
+            this.bnStopGrab.Location = new System.Drawing.Point(131, 34);
             this.bnStopGrab.Name = "bnStopGrab";
             this.bnStopGrab.Size = new System.Drawing.Size(100, 25);
             this.bnStopGrab.TabIndex = 6;
@@ -189,7 +188,7 @@
             // 
             this.bnStartGrab.Enabled = false;
             this.bnStartGrab.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bnStartGrab.Location = new System.Drawing.Point(15, 6);
+            this.bnStartGrab.Location = new System.Drawing.Point(15, 34);
             this.bnStartGrab.Name = "bnStartGrab";
             this.bnStartGrab.Size = new System.Drawing.Size(100, 25);
             this.bnStartGrab.TabIndex = 5;
@@ -201,7 +200,7 @@
             // 
             this.tbGain.Enabled = false;
             this.tbGain.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbGain.Location = new System.Drawing.Point(131, 139);
+            this.tbGain.Location = new System.Drawing.Point(131, 167);
             this.tbGain.Name = "tbGain";
             this.tbGain.Size = new System.Drawing.Size(100, 23);
             this.tbGain.TabIndex = 12;
@@ -211,7 +210,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(15, 142);
+            this.label2.Location = new System.Drawing.Point(15, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 14);
             this.label2.TabIndex = 11;
@@ -222,7 +221,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(15, 99);
+            this.label1.Location = new System.Drawing.Point(15, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 14);
             this.label1.TabIndex = 9;
@@ -232,7 +231,7 @@
             // 
             this.tbExposure.Enabled = false;
             this.tbExposure.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbExposure.Location = new System.Drawing.Point(131, 96);
+            this.tbExposure.Location = new System.Drawing.Point(131, 124);
             this.tbExposure.Name = "tbExposure";
             this.tbExposure.Size = new System.Drawing.Size(100, 23);
             this.tbExposure.TabIndex = 10;
@@ -257,7 +256,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tbExposure);
             this.groupBox2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(971, 314);
+            this.groupBox2.Location = new System.Drawing.Point(971, 347);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(243, 209);
             this.groupBox2.TabIndex = 18;
@@ -277,41 +276,21 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.loadingCircle1);
             this.groupBox4.Controls.Add(this.usblabelinfo);
             this.groupBox4.Controls.Add(this.pictureBox1);
             this.groupBox4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 10);
+            this.groupBox4.Location = new System.Drawing.Point(12, 37);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(940, 685);
+            this.groupBox4.Size = new System.Drawing.Size(940, 708);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "检测界面";
             // 
-            // loadingCircle1
-            // 
-            this.loadingCircle1.Active = false;
-            this.loadingCircle1.BackColor = System.Drawing.Color.Transparent;
-            this.loadingCircle1.Color = System.Drawing.Color.DarkOrange;
-            this.loadingCircle1.Font = new System.Drawing.Font("微软雅黑", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.loadingCircle1.ForeColor = System.Drawing.Color.Red;
-            this.loadingCircle1.InnerCircleRadius = 5;
-            this.loadingCircle1.Location = new System.Drawing.Point(402, 259);
-            this.loadingCircle1.Name = "loadingCircle1";
-            this.loadingCircle1.NumberSpoke = 12;
-            this.loadingCircle1.OuterCircleRadius = 11;
-            this.loadingCircle1.RotationSpeed = 100;
-            this.loadingCircle1.Size = new System.Drawing.Size(96, 96);
-            this.loadingCircle1.SpokeThickness = 2;
-            this.loadingCircle1.StylePreset = CNPOPSOFT.Controls.LoadingCircle.StylePresets.MacOSX;
-            this.loadingCircle1.TabIndex = 29;
-            this.loadingCircle1.Text = "loadingCircle1";
-            this.loadingCircle1.Visible = false;
-            // 
             // usblabelinfo
             // 
             this.usblabelinfo.AutoSize = true;
-            this.usblabelinfo.Location = new System.Drawing.Point(20, 6);
+            this.usblabelinfo.BackColor = System.Drawing.Color.Transparent;
+            this.usblabelinfo.Location = new System.Drawing.Point(19, 27);
             this.usblabelinfo.Name = "usblabelinfo";
             this.usblabelinfo.Size = new System.Drawing.Size(63, 14);
             this.usblabelinfo.TabIndex = 28;
@@ -321,7 +300,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(901, 665);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -336,7 +315,7 @@
             "海康相机",
             "Basler相机",
             "USB相机"});
-            this.cameraType.Location = new System.Drawing.Point(15, 1);
+            this.cameraType.Location = new System.Drawing.Point(15, 29);
             this.cameraType.Name = "cameraType";
             this.cameraType.Size = new System.Drawing.Size(100, 22);
             this.cameraType.TabIndex = 1;
@@ -345,7 +324,7 @@
             // 
             this.bnClose.Enabled = false;
             this.bnClose.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bnClose.Location = new System.Drawing.Point(131, 43);
+            this.bnClose.Location = new System.Drawing.Point(131, 71);
             this.bnClose.Name = "bnClose";
             this.bnClose.Size = new System.Drawing.Size(100, 25);
             this.bnClose.TabIndex = 4;
@@ -360,7 +339,7 @@
             this.groupBox3.Controls.Add(this.bnEnum);
             this.groupBox3.Controls.Add(this.bnOpen);
             this.groupBox3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox3.Location = new System.Drawing.Point(971, 181);
+            this.groupBox3.Location = new System.Drawing.Point(971, 223);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(243, 114);
             this.groupBox3.TabIndex = 17;
@@ -370,7 +349,7 @@
             // bnEnum
             // 
             this.bnEnum.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bnEnum.Location = new System.Drawing.Point(131, 0);
+            this.bnEnum.Location = new System.Drawing.Point(131, 28);
             this.bnEnum.Name = "bnEnum";
             this.bnEnum.Size = new System.Drawing.Size(100, 25);
             this.bnEnum.TabIndex = 2;
@@ -381,7 +360,7 @@
             // bnOpen
             // 
             this.bnOpen.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bnOpen.Location = new System.Drawing.Point(15, 43);
+            this.bnOpen.Location = new System.Drawing.Point(15, 71);
             this.bnOpen.Name = "bnOpen";
             this.bnOpen.Size = new System.Drawing.Size(100, 25);
             this.bnOpen.TabIndex = 3;
@@ -394,7 +373,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1230, 698);
+            this.ClientSize = new System.Drawing.Size(1230, 754);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.cbDeviceList);
             this.Controls.Add(this.groupBox2);
@@ -406,6 +385,7 @@
             this.Name = "SingleCamera";
             this.Text = " 深度学习工业检测（单相机模式）";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SingleCamera_FormClosing);
+            this.Load += new System.EventHandler(this.SingleCamera_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -439,6 +419,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         public System.Windows.Forms.PictureBox pictureBox1;
+        
         public System.Windows.Forms.ComboBox cameraType;
         private System.Windows.Forms.Button bnClose;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -447,6 +428,5 @@
         private System.Windows.Forms.TextBox tbModeltype;
         private System.Windows.Forms.Button bnThreshold;
         private System.Windows.Forms.Label usblabelinfo;
-        private CNPOPSOFT.Controls.LoadingCircle loadingCircle1;
     }
 }

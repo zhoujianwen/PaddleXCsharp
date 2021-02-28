@@ -211,6 +211,7 @@ namespace PaddleXCsharp
                     {
                         this.videoSource = new VideoCaptureDevice(videoDevices[selectIndex].MonikerString);//连接摄像头
                         videoSourcePlayer = new VideoSourcePlayer();
+                        
                         videoSource.NewFrame += new NewFrameEventHandler(callBackHandler);//捕获画面事件
                         videoSourcePlayer.NewFrame += new Accord.Controls.VideoSourcePlayer.NewFrameHandler(videoSourcePlayerCallBackHandler);
                         videoSourcePlayer.VideoSource = videoSource;

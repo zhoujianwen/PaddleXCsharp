@@ -62,48 +62,50 @@ namespace PaddleXCsharp
         /// <param name="NewFrameEventArgs"></param>
         Bitmap bitmap = null;
         //Mutex mutexLock = new Mutex();
-        int n = 0;
-        //Queue<Bitmap> bitmapList = new Queue<Bitmap>();
         static Object mutexLock = new Object();
         private void videoSourcePlayer_NewFrameReceived(object sender, NewFrameEventArgs eventArgs)
         {
-            //bitmapList.Enqueue((Bitmap)eventArgs.Frame.Clone());
-            //Thread.Sleep(1000);
-            //lock (this)
-            //{
-            if (Monitor.TryEnter(mutexLock, TimeSpan.FromSeconds(15)))
+
+            if (Monitor.TryEnter(mutexLock, 15))
             {
-                //mutexLock.WaitOne();
                 bitmap = (Bitmap)eventArgs.Frame.Clone();  //获取一帧图像
-
-                if (isInference) { bitmap = Inference(bitmap); }
-                if (pictureBox1.InvokeRequired)  // 当一个控件的InvokeRequired属性值为真时，说明有一个创建它以外的线程想访问它
+                try
                 {
-                    UpdateUI update = delegate
+                    if (isInference) { bitmap = Inference(bitmap); } //推理
+                    // 当一个控件的InvokeRequired属性值为真时，说明有一个创建它以外的线程想访问它
+                    if (pictureBox1.InvokeRequired) //刷写新图像
                     {
-
-                        DateTime now = DateTime.Now;
-                        Graphics g = Graphics.FromImage(bitmap);
-                    // paint current time
-                    SolidBrush brush = new SolidBrush(Color.Red);
-                        g.DrawString(now.ToString(), this.Font, brush, new PointF(5, 5));
-                        g.DrawString(string.Format("ID:{0}", n++), this.Font, brush, new PointF(5, this.pictureBox1.Height - 200));
-                        this.pictureBox1.Image = bitmap;
-                        brush.Dispose();
-                        g.Dispose();
-
-                    };
-                    pictureBox1.BeginInvoke(update);
-                } 
+                        UpdateUI update = delegate
+                        {
+                            // paint current time
+                            DateTime now = DateTime.Now;
+                            Graphics g = Graphics.FromImage(bitmap);
+                            SolidBrush brush = new SolidBrush(Color.Red);
+                            g.DrawString(now.ToString("yyyy-MM-dd HH:mm:ss dddd"), this.Font, brush, new PointF(5, 5));
+                            g.DrawString(string.Format("ID:{0},{1}", n++, usbDeviceSource.fpsLabel), this.Font, brush, new PointF(5, this.pictureBox1.Height - 200));
+                            this.pictureBox1.Image = bitmap;
+                            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                            brush.Dispose();
+                            g.Dispose();
+                        };
+                        pictureBox1.BeginInvoke(update);
+                    }
+                    else
+                    {
+                        pictureBox1.Image = bitmap;
+                    }
+                }
+                finally
+                {
+                    Monitor.Exit(mutexLock);
+                    //mutexLock.ReleaseMutex();
+                }
             }
-            Monitor.Exit(mutexLock);
-            //mutexLock.ReleaseMutex();
-            //else
-            //{
-            //    pictureBox1.Image = bitmap;
-            //}
-            //}
-
+            else
+            {
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox1.Image = bitmap;    //显示默认图像      
+            }
         }
 
         // New frame received by the player
@@ -111,7 +113,6 @@ namespace PaddleXCsharp
         {
             //DateTime now = DateTime.Now;
             //Graphics g = Graphics.FromImage(image);
-
             //// paint current time
             //SolidBrush brush = new SolidBrush(Color.Red);
             //g.DrawString(now.ToString(), this.Font, brush, new PointF(5, 5));
@@ -144,7 +145,7 @@ namespace PaddleXCsharp
         //        bmpG.Dispose();
         //    }
         //}
-
+        
         // 用于从驱动获取图像的缓存
 
         UInt32 m_nBufSizeForDriver = 0;
@@ -154,13 +155,13 @@ namespace PaddleXCsharp
         #region 接口定义及参数
         int modelType = 1;  // 模型的类型  0：分类模型；1：检测模型；2：分割模型
         string modelPath = ""; // 模型目录路径
-        bool useGPU = false;  // 是否使用GPU
+        bool useGPU = true;  // 是否使用GPU
         bool useTrt = false;  // 是否使用TensorRT
         bool useMkl = true;  // 是否使用MKLDNN加速模型在CPU上的预测性能
-        int mklThreadNum = 8; // 使用MKLDNN时，线程数量
+        int mklThreadNum = 16; // 使用MKLDNN时，线程数量
         int gpuID = 0; // 使用GPU的ID号
         string key = ""; //模型解密密钥，此参数用于加载加密的PaddleX模型时使用
-        bool useIrOptim = true; // 是否加速模型后进行图优化
+        bool useIrOptim = false; // 是否加速模型后进行图优化
         bool visualize = false;
         bool isInference = false;  // 是否进行推理   
         static IntPtr model; // 模型
@@ -170,7 +171,7 @@ namespace PaddleXCsharp
 
         // 定义CreatePaddlexModel接口
         [DllImport("detector.dll", EntryPoint = "CreatePaddlexModel", CharSet = CharSet.Ansi)]
-        static extern IntPtr CreatePaddlexModel(ref int modelType, 
+         static extern IntPtr CreatePaddlexModel(ref int modelType, 
                                                 string modelPath, 
                                                 bool useGPU, 
                                                 bool useTrt, 
@@ -179,20 +180,23 @@ namespace PaddleXCsharp
                                                 int gpuID, 
                                                 string key, 
                                                 bool useIrOptim);
-        
+        // 定义释放模型内存接口
+        [DllImport("detector.dll", EntryPoint = "FreeNewMemory", CharSet = CharSet.Ansi)]
+        static extern void FreeModelMemory(IntPtr model);
+
+
         // 定义分类接口
         [DllImport("paddlex_inference.dll", EntryPoint = "PaddlexClsPredict", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         static extern bool PaddlexClsPredict(IntPtr model, byte[] image, int height, int width, int channels, out int categoryID, out float score);
 
         // 定义检测接口
         [DllImport("detector.dll", EntryPoint = "PaddlexDetPredict", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        static extern bool PaddlexDetPredict(IntPtr model,[MarshalAs(UnmanagedType.LPArray)]  byte[] image, int height, int width, int channels, int max_box, float[] result, bool visualize);
-        
-        #endregion
+        static extern bool PaddlexDetPredict(IntPtr model, byte[] image, int height, int width, int channels, int max_box, float[] result, bool visualize);
 
         //// 定义语义分割接口
         //[DllImport("paddlex_inference.dll", EntryPoint = "PaddlexSegPredict", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        //static extern bool PaddlexSegPredict(IntPtr model, byte[] image, int height, int width, int channels, );
+        //static extern bool PaddlexSegPredict(IntPtr model, byte[] image, int height, int width, int channels, long[] label_map, float[] score_map, bool visualize);
+        #endregion
 
         public SingleCamera()
         {
@@ -202,6 +206,7 @@ namespace PaddleXCsharp
             this.bnLoadModel.Enabled = false;
             this.bnOpen.Enabled = false;
             this.StartPosition = FormStartPosition.CenterScreen;
+            
         }
 
         // 选择所使用相机的类型
@@ -375,6 +380,7 @@ namespace PaddleXCsharp
             bnStopDetection.Enabled = false;
             bnSaveImage.Enabled = false;
             usblabelinfo.Visible = false;
+            //FreeModelMemory(model); //释放Model资源
         }
         private void SetCtrlWhenStartGrab()
         {
@@ -823,6 +829,7 @@ namespace PaddleXCsharp
                     // 控件操作
                     SetCtrlWhenStartGrab();
                     bnLoadModel.Enabled = true;
+                    bnStartDetection.Enabled = false;
                 }
                 catch
                 {
@@ -954,7 +961,6 @@ namespace PaddleXCsharp
         // 加载模型
         private void BnLoadModel_Click(object sender, EventArgs e)
         {
-
             BnStopDetection_Click(sender, e);
             //FolderBrowserDialog fileDialog = new FolderBrowserDialog();
             CommonOpenFileDialog fileDialog = new CommonOpenFileDialog();
@@ -966,58 +972,57 @@ namespace PaddleXCsharp
             //    //fileDialog.file = modelPath;
             //}
             this.bnLoadModel.Enabled = false;
+
             if (fileDialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                if(modelPath=="")
+                if (modelPath == "")
                     modelPath = fileDialog.FileName;
                 //MessageBox.Show("已选择模型路径:" + modelPath, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    
                 Func<bool> handle = () =>
                 {
-                    this.loadingCircle1.Invoke(
-                        new Action(() => { this.loadingCircle1.Visible = true; }));
-                    this.loadingCircle1.Invoke(
-                         new Action(() => { this.loadingCircle1.Active = true; }));
+
+                    this.Cursor = Cursors.WaitCursor;
                     model = CreatePaddlexModel(ref modelType, modelPath, useGPU, useTrt, useMkl, mklThreadNum, gpuID, key, useIrOptim);
                     return true;
                 };
-                
+
                 IAsyncResult result = handle.BeginInvoke(null, null);
                 Thread loading = new Thread(() =>
                 {
                     while (!result.AsyncWaitHandle.WaitOne(500))
                     {
-                           //do something else ...
+                        //do something else ...
                     }
 
                     if (handle.EndInvoke(result))
                     {
-                        loadingCircle1.Active = false;
-                        loadingCircle1.Visible = false;
+                        this.Cursor = Cursors.Default;
+                        this.bnLoadModel.Enabled = true;
+
                     }
                 });
-                loading.IsBackground = true ;
+                loading.IsBackground = true;
                 loading.Start();
                 //GC.KeepAlive(modelType);
                 switch (modelType)
-                    {
-                        case 0: tbModeltype.Text = "0：图像分类"; break;
-                        case 1: tbModeltype.Text = "1：目标检测"; break;
-                        case 2: tbModeltype.Text = "2：语义分割"; break;
-                    }
-
-                    bnStartDetection.Enabled = true;
-                    //bnStopDetection.Enabled = true;
-                    bnThreshold.Enabled = true;
+                {
+                    case 0: tbModeltype.Text = "0：图像分类"; break;
+                    case 1: tbModeltype.Text = "1：目标检测"; break;
+                    case 2: tbModeltype.Text = "2：语义分割"; break;
                 }
-            
-            this.bnLoadModel.Enabled = true;
+                bnStartDetection.Enabled = true;
+                //bnStopDetection.Enabled = true;
+                bnThreshold.Enabled = true;
+            }
+            else {
+                this.bnLoadModel.Enabled = true;
+            }
+
 
         }
 
         // 将Btimap类转换为byte[]类函数
-        public unsafe static byte[] GetbyteData(Bitmap bmp)
+        public static byte[] GetbyteData(Bitmap bmp)
         {
             BitmapData bmpData = null;
             bmpData = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadOnly, bmp.PixelFormat);
@@ -1036,17 +1041,38 @@ namespace PaddleXCsharp
             return hObject.AddrOfPinnedObject();
         }
 
+        public static byte[] GetBGRValues(Bitmap bmp, out int stride)
+        {
+            var rect = new Rectangle(0, 0, bmp.Width, bmp.Height);
+            var bmpData = bmp.LockBits(rect, System.Drawing.Imaging.ImageLockMode.ReadOnly, bmp.PixelFormat);
+            stride = bmpData.Stride;
+            var rowBytes = bmpData.Width * Image.GetPixelFormatSize(bmp.PixelFormat) / 8;
+            var imgBytes = bmp.Height * rowBytes;
+            byte[] rgbValues = new byte[imgBytes];
+            IntPtr ptr = bmpData.Scan0;
+            for (var i = 0; i < bmp.Height; i++)
+            {
+                Marshal.Copy(ptr, rgbValues, i * rowBytes, rowBytes);
+                ptr += bmpData.Stride;
+            }
+            bmp.UnlockBits(bmpData);
+            return rgbValues;
+        }
+
         // 推理
         Bitmap resultShow;
-        private Bitmap Inference(Bitmap bmp)
+        int n=0;
+        private Bitmap Inference(Bitmap bmp) 
         {
             Bitmap bmpNew = bmp.Clone(new Rectangle(0, 0, bmp.Width, bmp.Height), bmp.PixelFormat);
             //Bitmap resultShow;
             Mat img = BitmapConverter.ToMat(bmpNew);
 
             int channel = Image.GetPixelFormatSize(bmp.PixelFormat) / 8;
-            byte[] source = GetbyteData(bmp);
-            if(modelType == 0)
+            //byte[] source = GetbyteData(bmp);
+            int stride;
+            byte[] source = GetBGRValues(bmp, out stride);
+            if (modelType == 0)
             {
                 bool res = PaddlexClsPredict(model, source, bmp.Height, bmp.Width, channel, out int categoryID, out float score);
                 if(res)
@@ -1063,14 +1089,13 @@ namespace PaddleXCsharp
                 int max_box = 10;
                 bool res = false;
                 float[] result = new float[max_box * 6 +1];
-
                 res = PaddlexDetPredict(model, source, bmp.Height, bmp.Width, channel, max_box, result, visualize);
                 if (res)
                 {
                     Scalar color = new Scalar(255, 0, 0);
                     for (int i = 0; i < result[0]; i++)
                     {
-                        if (result[6 * i + 2] < 0.5)
+                        if (result[6 * i + 2] < 0.9)
                         {
                             continue;
                         }
@@ -1078,13 +1103,15 @@ namespace PaddleXCsharp
                         Cv2.Rectangle(img, rect, color, 1, LineTypes.AntiAlias);
                         string text = category[(int)result[6 * i + 1]] + ":" + result[6 * i + 2].ToString("f2");
                         Cv2.PutText(img, text, new OpenCvSharp.Point((int)result[6 * i + 3], (int)result[6 * i + 4] - 5), HersheyFonts.HersheySimplex, 0.3, Scalar.Red);
+                        //DateTime now = DateTime.Now;
+                        //Cv2.PutText(img, now.ToString(), new OpenCvSharp.Point(5,5), HersheyFonts.HersheyComplex, 0.5, Scalar.Red);
+                        //Cv2.PutText(img, string.Format("ID:{0}", ++n),new OpenCvSharp.Point(5, this.pictureBox1.Height-200), HersheyFonts.HersheyComplex, 0.5, Scalar.Red);
                     }
                 }
                 else {
                     LogHelper.WriteLog("产品ID检测失败！");
                 }
             }
-
             resultShow = new Bitmap(img.Cols, img.Rows, (int)img.Step(), PixelFormat.Format24bppRgb, img.Data);
             System.GC.Collect();
             return resultShow;
@@ -1092,10 +1119,16 @@ namespace PaddleXCsharp
 
         private void BnStartDetection_Click(object sender, EventArgs e)
         {
-            bnLoadModel.Enabled = false;
-            bnStopDetection.Enabled = true;
-            bnStartDetection.Enabled = false;
-            isInference = true;
+            if (!isInference && model != IntPtr.Zero)
+            {
+                bnLoadModel.Enabled = false;
+                bnStopDetection.Enabled = true;
+                bnStartDetection.Enabled = false;
+                isInference = true;
+            }
+            else {
+                ShowMessage("检测失败！", "注意");
+            }
         }
 
         // 停止检测
@@ -1119,6 +1152,14 @@ namespace PaddleXCsharp
         {
 
             BnClose_Click(sender, e);
+            this.Cursor = Cursors.WaitCursor;
+            // wait ~ 1.5 seconds
+            for (int i = 0; i < 3; i++)
+            {
+                System.Threading.Thread.Sleep(500);
+            }
+            this.Cursor = Cursors.Default;
+            FreeModelMemory(model); //释放model资源
             System.Environment.Exit(0);
         }
 
@@ -1132,7 +1173,7 @@ namespace PaddleXCsharp
         private void bnSaveImage_Click(object sender, EventArgs e)
         {
             this.bnSaveImage.Enabled = false;
-
+            
             if (resultShow == null && pictureBox1.Image == null)
             {
                 this.ShowMessage("保存产品图片失败！", "Warning");
@@ -1156,8 +1197,11 @@ namespace PaddleXCsharp
             }
             this.ShowMessage("保存成功！", "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.bnSaveImage.Enabled = true;
-          
         }
 
+        private void SingleCamera_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

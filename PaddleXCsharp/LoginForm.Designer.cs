@@ -61,9 +61,9 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(133, 256);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(119, 16);
+            this.radioButton3.Size = new System.Drawing.Size(107, 16);
             this.radioButton3.TabIndex = 4;
-            this.radioButton3.Text = "多相机gRPC起服务";
+            this.radioButton3.Text = "多相机gRPC服务";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -246,6 +246,7 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 283);
