@@ -11,7 +11,7 @@
   * 部署于本地服务器
   * 每次可调用多个相机（目前支持2个）
   * 每个相机可独立加载一个深度学习模型，同步实现多种任务
-* 远程起服务模式
+* 远程起服务模式（尚在开发中）
   * 部署于远程服务器
   * 通过gRPC方式，调用远程服务器
   
@@ -21,13 +21,13 @@
 
 为了方便测试，默认不调用相机，已禁用相机的代码
 
-![Alt text](./images/%E5%8D%95%E7%9B%B8%E6%9C%BA-%E7%9B%B8%E6%9C%BA%E6%93%8D%E4%BD%9C.gif)
+![示例](./images/%E5%8D%95%E7%9B%B8%E6%9C%BA-%E7%9B%B8%E6%9C%BA%E6%93%8D%E4%BD%9C.gif)
 
-![Alt text](./images/%E5%8D%95%E7%9B%B8%E6%9C%BA-%E6%8E%A8%E7%90%86.gif)
+![示例](./images/%E5%8D%95%E7%9B%B8%E6%9C%BA-%E6%8E%A8%E7%90%86.gif)
 
 ## 多相机模式界面
 相机操作及推理
 
-![Alt text](./images/%E5%A4%9A%E7%9B%B8%E6%9C%BA-%E7%9B%B8%E6%9C%BA%E6%93%8D%E4%BD%9C.gif)
+![示例](./images/%E5%A4%9A%E7%9B%B8%E6%9C%BA-%E7%9B%B8%E6%9C%BA%E6%93%8D%E4%BD%9C.gif)
 
-![Alt text](./images/%E5%A4%9A%E7%9B%B8%E6%9C%BA-%E6%8E%A8%E7%90%86.gif)
+![示例](./images/%E5%A4%9A%E7%9B%B8%E6%9C%BA-%E6%8E%A8%E7%90%86.gif)
