@@ -932,7 +932,7 @@ namespace PaddleXCsharp
             BnStopDetection_Click(sender, e);
 
             //Paths = System.IO.Directory.GetFiles(@"C:\Users\Cleme\source\repos\WindowsFormsApp3\bin\Debug\netcoreapp3.1\datasets\vegetables_cls\all");
-            Paths = System.IO.Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory + @"..\..\vegetables_cls");
+            Paths = System.IO.Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory + @"..\..\..\vegetables_cls");
 
             CommonOpenFileDialog fileDialog = new CommonOpenFileDialog();
             fileDialog.IsFolderPicker = true;
