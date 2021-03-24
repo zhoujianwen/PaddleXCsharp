@@ -20,6 +20,7 @@ using Accord.Video;
 using System.Diagnostics;
 using System.Configuration;
 using Sunny.UI;
+using System.Threading.Tasks;
 
 #endregion
 
@@ -69,22 +70,28 @@ namespace PaddleXCsharp
             if (Monitor.TryEnter(mutexLock, 15))
             {
                 bitmap = (Bitmap)eventArgs.Frame.Clone();  //获取一帧图像
+                Bitmap outBitmap = null;
                 try
                 {
-                    if (isInference) { bitmap = Inference(bitmap); } //推理
+                    if (paddlex.isInference) { outBitmap = Inference(ref bitmap); } //推理
                     // 当一个控件的InvokeRequired属性值为真时，说明有一个创建它以外的线程想访问它
                     if (pictureBox1.InvokeRequired) //刷写新图像
                     {
                         UpdateUI update = delegate
                         {
                             // paint current time
+                            if (outBitmap == null)
+                            {
+                                outBitmap = bitmap;
+                            }
                             DateTime now = DateTime.Now;
-                            Graphics g = Graphics.FromImage(bitmap);
+                            Graphics g = Graphics.FromImage(outBitmap);
                             SolidBrush brush = new SolidBrush(Color.Red);
                             g.DrawString(now.ToString("yyyy-MM-dd HH:mm:ss dddd"), this.Font, brush, new PointF(5, 5));
                             g.DrawString(string.Format("ID:{0},{1}", n++, usbDeviceSource.fpsLabel), this.Font, brush, new PointF(5, this.pictureBox1.Height - 200));
-                            this.pictureBox1.Image = bitmap;
+
                             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                            this.pictureBox1.Image = outBitmap;
                             brush.Dispose();
                             g.Dispose();
                         };
@@ -153,49 +160,7 @@ namespace PaddleXCsharp
 
         /* ================================= inference ================================= */
         #region 接口定义及参数
-        int modelType = 1;  // 模型的类型  0：分类模型；1：检测模型；2：分割模型
-        string modelPath = ""; // 模型目录路径
-        bool useGPU = true;  // 是否使用GPU
-        bool useTrt = false;  // 是否使用TensorRT
-        bool useMkl = true;  // 是否使用MKLDNN加速模型在CPU上的预测性能
-        int mklThreadNum = 16; // 使用MKLDNN时，线程数量
-        int gpuID = 0; // 使用GPU的ID号
-        string key = ""; //模型解密密钥，此参数用于加载加密的PaddleX模型时使用
-        bool useIrOptim = false; // 是否加速模型后进行图优化
-        bool visualize = false;
-        bool isInference = false;  // 是否进行推理   
-        static IntPtr model; // 模型
-
-        // 目标物种类，需根据实际情况修改！
-        string[] category = { "background", "xiaoduxiong"};
-
-        // 定义CreatePaddlexModel接口
-        [DllImport("detector.dll", EntryPoint = "CreatePaddlexModel", CharSet = CharSet.Ansi)]
-         static extern IntPtr CreatePaddlexModel(ref int modelType, 
-                                                string modelPath, 
-                                                bool useGPU, 
-                                                bool useTrt, 
-                                                bool useMkl, 
-                                                int mklThreadNum, 
-                                                int gpuID, 
-                                                string key, 
-                                                bool useIrOptim);
-        // 定义释放模型内存接口
-        [DllImport("detector.dll", EntryPoint = "FreeNewMemory", CharSet = CharSet.Ansi)]
-        static extern void FreeModelMemory(IntPtr model);
-
-
-        // 定义分类接口
-        [DllImport("paddlex_inference.dll", EntryPoint = "PaddlexClsPredict", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        static extern bool PaddlexClsPredict(IntPtr model, byte[] image, int height, int width, int channels, out int categoryID, out float score);
-
-        // 定义检测接口
-        [DllImport("detector.dll", EntryPoint = "PaddlexDetPredict", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        static extern bool PaddlexDetPredict(IntPtr model, byte[] image, int height, int width, int channels, int max_box, float[] result, bool visualize);
-
-        //// 定义语义分割接口
-        //[DllImport("paddlex_inference.dll", EntryPoint = "PaddlexSegPredict", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        //static extern bool PaddlexSegPredict(IntPtr model, byte[] image, int height, int width, int channels, long[] label_map, float[] score_map, bool visualize);
+        PaddleX paddlex = new PaddleX();
         #endregion
 
         public SingleCamera()
@@ -315,8 +280,8 @@ namespace PaddleXCsharp
                 {
                     //连接相机
                     usbDeviceSource.initCamera();
-                    usbDeviceSource.callBackHandler += videoSourcePlayer_NewFrameReceived; //回调函数处理视频帧
-                    usbDeviceSource.videoSourcePlayerCallBackHandler += videoSourcePlayer_NewFrame;
+                    //usbDeviceSource.callBackHandler += videoSourcePlayer_NewFrameReceived; //回调函数处理视频帧
+                    //usbDeviceSource.videoSourcePlayerCallBackHandler += videoSourcePlayer_NewFrame;
                     if (usbDeviceSource.DeviceExist)
                     {
                         // 返回相机数量
@@ -407,138 +372,139 @@ namespace PaddleXCsharp
         // 启动设备
         private void BnOpen_Click(object sender, EventArgs e)
         {
-            // 启动海康相机
-            if ((chooseHIK) && (!chooseBasler))
-            {
-                try
-                {
-                    camera2 = hIKVisionCamera.CameraInit(cbDeviceList.SelectedIndex);
-                    // 获取参数
-                    BnGetParam_Click(null, null);
+            SetCtrlWhenOpen();
+            //// 启动海康相机
+            //if ((chooseHIK) && (!chooseBasler))
+            //{
+            //    try
+            //    {
+            //        camera2 = hIKVisionCamera.CameraInit(cbDeviceList.SelectedIndex);
+            //        // 获取参数
+            //        BnGetParam_Click(null, null);
 
-                    // 控件操作
-                    SetCtrlWhenOpen();
-                }
-                catch
-                {
+            //        // 控件操作
+            //        SetCtrlWhenOpen();
+            //    }
+            //    catch
+            //    {
 
-                    MessageBox.Show("打开相机失败！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        MessageBox.Show("打开相机失败！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    return;
-                }
-            }
+            //        return;
+            //    }
+            //}
 
-            // 启动basler相机
-            else if ((chooseBasler) && (!chooseHIK))
-            {
-                try
-                {
-                    // 初始化所选相机
-                    camera1 = baslerCamera.CameraInit(cbDeviceList.SelectedIndex);
-                    // 获取参数
-                    BnGetParam_Click(null, null);
-                    // 控件操作
-                    SetCtrlWhenOpen();
-                }
-                catch
-                {
-                    MessageBox.Show("打开相机失败！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-            else if(chooseUSB&&(!chooseBasler) && (!chooseHIK))
-            {
-                //启动USB相机
+            //// 启动basler相机
+            //else if ((chooseBasler) && (!chooseHIK))
+            //{
+            //    try
+            //    {
+            //        // 初始化所选相机
+            //        camera1 = baslerCamera.CameraInit(cbDeviceList.SelectedIndex);
+            //        // 获取参数
+            //        BnGetParam_Click(null, null);
+            //        // 控件操作
+            //        SetCtrlWhenOpen();
+            //    }
+            //    catch
+            //    {
+            //        MessageBox.Show("打开相机失败！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
+            //}
+            //else if(chooseUSB&&(!chooseBasler) && (!chooseHIK))
+            //{
+            //    //启动USB相机
                 
-                Func<VideoCaptureDevice> delFunc = () => {  camera3 = usbDeviceSource.open(cbDeviceList.SelectedIndex); return camera3;  };
-                IAsyncResult result = delFunc.BeginInvoke(null, null);
-                this.bnThreshold.Enabled = false;
-                int count = 0;
+            //    Func<VideoCaptureDevice> delFunc = () => {  camera3 = usbDeviceSource.open(cbDeviceList.SelectedIndex); return camera3;  };
+            //    IAsyncResult result = delFunc.BeginInvoke(null, null);
+            //    this.bnThreshold.Enabled = false;
+            //    int count = 0;
 
-                #region
-                //Thread waitloading = new Thread(() => {
-                //    count = 0;
-                //    while (count < 2)
-                //    {
-                //        if (count < 4)
-                //        {
-                //            this.Invoke(new Action(() => { this.usblabelinfo.Text += "."; }));
-                //        }
-                //        else
-                //        {
-                //            count = 0;
-                //            this.Invoke(new Action(() => { this.usblabelinfo.Text += "正在启动USB相机."; }));
-                //        }
-                //        count++;
-                //        Thread.Sleep(500);
-                //    }
-                //    this.Invoke(new Action(() => { this.usblabelinfo.Visible = false; }));
-                //});
-                #endregion
-                /*
-                 result.IsCompleted可以判断异步委托是否执行完成，执行完成返回true
-                 WaitOne方法自定义一个等待时间，如果在这个等待时间内异步委托没有执行完成，
-                 那么就会执行 while里面的主线程的逻辑，反之就不会执行。
-                https://zhoujianwen.blog.csdn.net/article/details/112385180
-                C# Winform 跨线程更新UI控件常用方法汇总
-                https://www.cnblogs.com/marshal-m/p/3201051.html
-                 */
-                this.usblabelinfo.Text = "正在启动USB相机";
-                this.usblabelinfo.Visible = true;
-                Thread loading = new Thread(() =>
-                {
-                    //异步操作判断USB相机是否启动成功
-                    while (!result.AsyncWaitHandle.WaitOne(500)) //(!result.IsCompleted)
-                    {
-                        // 询问是否完成操作，否则做其它事情。
-                        if (count < 4)
-                        {
-                            this.Invoke(new Action(() => { this.usblabelinfo.Text += ".";}));
-                        }
-                        else
-                        {
-                            count = 0;
-                            this.Invoke(new Action(() => { this.usblabelinfo.Text = "正在启动USB相机."; }));
-                        }
-                        count++;
-                    }
+            //    #region
+            //    //Thread waitloading = new Thread(() => {
+            //    //    count = 0;
+            //    //    while (count < 2)
+            //    //    {
+            //    //        if (count < 4)
+            //    //        {
+            //    //            this.Invoke(new Action(() => { this.usblabelinfo.Text += "."; }));
+            //    //        }
+            //    //        else
+            //    //        {
+            //    //            count = 0;
+            //    //            this.Invoke(new Action(() => { this.usblabelinfo.Text += "正在启动USB相机."; }));
+            //    //        }
+            //    //        count++;
+            //    //        Thread.Sleep(500);
+            //    //    }
+            //    //    this.Invoke(new Action(() => { this.usblabelinfo.Visible = false; }));
+            //    //});
+            //    #endregion
+            //    /*
+            //     result.IsCompleted可以判断异步委托是否执行完成，执行完成返回true
+            //     WaitOne方法自定义一个等待时间，如果在这个等待时间内异步委托没有执行完成，
+            //     那么就会执行 while里面的主线程的逻辑，反之就不会执行。
+            //    https://zhoujianwen.blog.csdn.net/article/details/112385180
+            //    C# Winform 跨线程更新UI控件常用方法汇总
+            //    https://www.cnblogs.com/marshal-m/p/3201051.html
+            //     */
+            //    this.usblabelinfo.Text = "正在启动USB相机";
+            //    this.usblabelinfo.Visible = true;
+            //    Thread loading = new Thread(() =>
+            //    {
+            //        //异步操作判断USB相机是否启动成功
+            //        while (!result.AsyncWaitHandle.WaitOne(500)) //(!result.IsCompleted)
+            //        {
+            //            // 询问是否完成操作，否则做其它事情。
+            //            if (count < 4)
+            //            {
+            //                this.Invoke(new Action(() => { this.usblabelinfo.Text += ".";}));
+            //            }
+            //            else
+            //            {
+            //                count = 0;
+            //                this.Invoke(new Action(() => { this.usblabelinfo.Text = "正在启动USB相机."; }));
+            //            }
+            //            count++;
+            //        }
 
-                    //获取委托函数返回结果
-                    if (delFunc.EndInvoke(result)!=null)
-                    {
-                        // wait ~ 2 seconds
-                        for(int i=0;i<4;i++)
-                        { 
-                            System.Threading.Thread.Sleep(500);
-                            if (count < 4)
-                            {
-                                this.Invoke(new Action(() => { this.usblabelinfo.Text += "."; }));
-                            }
-                            else
-                            {
-                                count = 0;
-                                this.Invoke(new Action(() => { this.usblabelinfo.Text = "正在启动USB相机."; }));
-                            }
-                            count++;
-                            i++;
-                        }
-                        // 获取参数
-                        BnGetParam_Click(null, null);
-                        // 控件操作
-                        SetCtrlWhenOpen();
-                        usbCanGrab = true;
-                        this.usblabelinfo.Visible = false;
-                    }
-                    else
-                    {
-                            this.Invoke(new Action(() => { this.usblabelinfo.Visible = false; }));
+            //        //获取委托函数返回结果
+            //        if (delFunc.EndInvoke(result)!=null)
+            //        {
+            //            // wait ~ 2 seconds
+            //            for(int i=0;i<4;i++)
+            //            { 
+            //                System.Threading.Thread.Sleep(500);
+            //                if (count < 4)
+            //                {
+            //                    this.Invoke(new Action(() => { this.usblabelinfo.Text += "."; }));
+            //                }
+            //                else
+            //                {
+            //                    count = 0;
+            //                    this.Invoke(new Action(() => { this.usblabelinfo.Text = "正在启动USB相机."; }));
+            //                }
+            //                count++;
+            //                i++;
+            //            }
+            //            // 获取参数
+            //            BnGetParam_Click(null, null);
+            //            // 控件操作
+            //            SetCtrlWhenOpen();
+            //            usbCanGrab = true;
+            //            this.usblabelinfo.Visible = false;
+            //        }
+            //        else
+            //        {
+            //                this.Invoke(new Action(() => { this.usblabelinfo.Visible = false; }));
                      
-                        MessageBox.Show("打开相机失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                });
-                loading.IsBackground = true;
-                loading.Start();
-            }
+            //            MessageBox.Show("打开相机失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    });
+            //    loading.IsBackground = true;
+            //    loading.Start();
+            //}
         }
 
        
@@ -706,7 +672,7 @@ namespace PaddleXCsharp
                     Cv2.CvtColor(matImage, matImageNew, ColorConversionCodes.GRAY2RGB);
                     Bitmap bitmap = matImageNew.ToBitmap();  // Mat转为Bitmap
                     // 是否进行推理
-                    if (isInference) { bitmap = Inference(bitmap); }
+                    if (paddlex.isInference) { bitmap = Inference(ref bitmap); }
                     if (pictureBox1.InvokeRequired)  // 当一个控件的InvokeRequired属性值为真时，说明有一个创建它以外的线程想访问它
                     {
                         UpdateUI update = delegate { pictureBox1.Image = bitmap; };
@@ -734,7 +700,7 @@ namespace PaddleXCsharp
                             converter.Convert(ptrBmp, bmpData.Stride * bitmap.Height, grabResult);
                             bitmap.UnlockBits(bmpData);
                             // 是否进行推理
-                            if (isInference) { bitmap = Inference(bitmap); }
+                            if (paddlex.isInference) { bitmap = Inference(ref bitmap); }
                             // 禁止跨线程直接访问控件，故invoke到主线程中
                             // 参考：https://bbs.csdn.net/topics/350050105
                             //       https://www.cnblogs.com/lky-learning/p/14025280.html
@@ -768,77 +734,78 @@ namespace PaddleXCsharp
         // 开始采集
         private void BnStartGrab_Click(object sender, EventArgs e)
         {
-            if ((chooseHIK) && (!chooseBasler))
-            {
-                try
-                {
-                    // 标志位置位true
-                    hikCanGrab = true;
-                    // 开始采集
-                    hIKVisionCamera.StartGrabbing();
-                    // 用线程更新显示
-                    hikGrabThread = new Thread(GrabThreadProcess);
-                    hikGrabThread.Start();
-                    // 控件操作
-                    SetCtrlWhenStartGrab();
-                }
-                catch
-                {
-                    hikCanGrab = false;
-                    hikGrabThread.Join();
-                    MessageBox.Show("开始采集失败！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+            SetCtrlWhenStartGrab();
+            //if ((chooseHIK) && (!chooseBasler))
+            //{
+            //    try
+            //    {
+            //        // 标志位置位true
+            //        hikCanGrab = true;
+            //        // 开始采集
+            //        hIKVisionCamera.StartGrabbing();
+            //        // 用线程更新显示
+            //        hikGrabThread = new Thread(GrabThreadProcess);
+            //        hikGrabThread.Start();
+            //        // 控件操作
+            //        SetCtrlWhenStartGrab();
+            //    }
+            //    catch
+            //    {
+            //        hikCanGrab = false;
+            //        hikGrabThread.Join();
+            //        MessageBox.Show("开始采集失败！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
 
-            }
-            else if ((chooseBasler) && (!chooseHIK))
-            {
-                try
-                {
-                    // 标志符号
-                    baslerCanGrab = true;
-                    // 开始Grab
-                    baslerCamera.StartGrabbing();
-                    // 用线程更新显示
-                    baslerGrabThread = new Thread(GrabThreadProcess);
-                    baslerGrabThread.Start();
-                    // 控件操作
-                    SetCtrlWhenStartGrab();
-                }
-                catch
-                {
-                    baslerCanGrab = false;
-                    baslerGrabThread.Join();
-                    MessageBox.Show("开始采集失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+            //}
+            //else if ((chooseBasler) && (!chooseHIK))
+            //{
+            //    try
+            //    {
+            //        // 标志符号
+            //        baslerCanGrab = true;
+            //        // 开始Grab
+            //        baslerCamera.StartGrabbing();
+            //        // 用线程更新显示
+            //        baslerGrabThread = new Thread(GrabThreadProcess);
+            //        baslerGrabThread.Start();
+            //        // 控件操作
+            //        SetCtrlWhenStartGrab();
+            //    }
+            //    catch
+            //    {
+            //        baslerCanGrab = false;
+            //        baslerGrabThread.Join();
+            //        MessageBox.Show("开始采集失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
 
-            } 
-            else if (!chooseBasler && !chooseHIK && chooseUSB)
-            {
-                //USB开始采集
-                try
-                {
-                    // 标志符号
-                    usbCanGrab = true;
-                    //// 开始Grab
-                    usbDeviceSource.StartGrabbing();
-                    //// 用线程更新显示
-                    //usbGrabThread = new Thread(GrabThreadProcess);
-                    //usbGrabThread.Start();
-                    // 控件操作
-                    SetCtrlWhenStartGrab();
-                    bnLoadModel.Enabled = true;
-                    bnStartDetection.Enabled = false;
-                }
-                catch
-                {
-                    usbCanGrab = false;
-                    usbGrabThread.Join();
-                    MessageBox.Show("开始采集失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
+            //} 
+            //else if (!chooseBasler && !chooseHIK && chooseUSB)
+            //{
+            //    //USB开始采集
+            //    try
+            //    {
+            //        // 标志符号
+            //        usbCanGrab = true;
+            //        //// 开始Grab
+            //        usbDeviceSource.StartGrabbing();
+            //        //// 用线程更新显示
+            //        //usbGrabThread = new Thread(GrabThreadProcess);
+            //        //usbGrabThread.Start();
+            //        // 控件操作
+            //        SetCtrlWhenStartGrab();
+            //        bnLoadModel.Enabled = true;
+            //        bnStartDetection.Enabled = false;
+            //    }
+            //    catch
+            //    {
+            //        usbCanGrab = false;
+            //        usbGrabThread.Join();
+            //        MessageBox.Show("开始采集失败，请重启！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
+            //}
         }
 
         // 停止采集
@@ -882,7 +849,7 @@ namespace PaddleXCsharp
                     //usbGrabThread.Join();  // 主线程阻塞，等待线程结束
                     usbDeviceSource.StopGrabbing();  // 停止采集
                     SetCtrlWhenStopGrab();  // 控件操作
-                    isInference = false;
+                    paddlex.isInference = false;
                 }
                 catch
                 {
@@ -957,58 +924,62 @@ namespace PaddleXCsharp
             }
         }
         #endregion
-
+        string[] Paths;
+        Bitmap Inbitmap;
         // 加载模型
         private void BnLoadModel_Click(object sender, EventArgs e)
         {
             BnStopDetection_Click(sender, e);
-            //FolderBrowserDialog fileDialog = new FolderBrowserDialog();
+
+            //Paths = System.IO.Directory.GetFiles(@"C:\Users\Cleme\source\repos\WindowsFormsApp3\bin\Debug\netcoreapp3.1\datasets\vegetables_cls\all");
+            Paths = System.IO.Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory + @"..\..\vegetables_cls");
+
             CommonOpenFileDialog fileDialog = new CommonOpenFileDialog();
             fileDialog.IsFolderPicker = true;
-            //fileDialog.Description = "请选择模型路径";
-            //fileDialog.ShowNewFolderButton = false;
-            //if (modelPath != "")
-            //{
-            //    //fileDialog.file = modelPath;
-            //}
             this.bnLoadModel.Enabled = false;
 
             if (fileDialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                if (modelPath == "")
-                    modelPath = fileDialog.FileName;
+                if (paddlex.modelPath == "")
+                    paddlex.modelPath = fileDialog.FileName;
                 //MessageBox.Show("已选择模型路径:" + modelPath, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Func<bool> handle = () =>
-                {
+                paddlex.model = PaddleX.CreatePaddlexModel(ref paddlex.modelType, paddlex.modelPath, paddlex.useGPU, paddlex.useTrt, paddlex.useMkl, paddlex.mklThreadNum, paddlex.gpuID, paddlex.key, paddlex.useIrOptim);
+                this.bnLoadModel.Enabled = true;
+                //Func<bool> handle = () =>
+                //{
 
-                    this.Cursor = Cursors.WaitCursor;
-                    model = CreatePaddlexModel(ref modelType, modelPath, useGPU, useTrt, useMkl, mklThreadNum, gpuID, key, useIrOptim);
-                    return true;
-                };
+                //    this.Cursor = Cursors.WaitCursor;
+                //    paddlex.model = PaddleX.CreatePaddlexModel(ref paddlex.modelType, paddlex.modelPath, paddlex.useGPU, paddlex.useTrt, paddlex.useMkl, paddlex.mklThreadNum, paddlex.gpuID, paddlex.key, paddlex.useIrOptim);
+                //    return true;
+                //};
 
-                IAsyncResult result = handle.BeginInvoke(null, null);
-                Thread loading = new Thread(() =>
-                {
-                    while (!result.AsyncWaitHandle.WaitOne(500))
-                    {
-                        //do something else ...
-                    }
+                //IAsyncResult result = handle.BeginInvoke(null, null);
+                //Thread loading = new Thread(() =>
+                //{
+                //    while (!result.AsyncWaitHandle.WaitOne(500))
+                //    {
+                //        //do something else ...
+                //    }
 
-                    if (handle.EndInvoke(result))
-                    {
-                        this.Cursor = Cursors.Default;
-                        this.bnLoadModel.Enabled = true;
-
-                    }
-                });
-                loading.IsBackground = true;
-                loading.Start();
+                //    if (handle.EndInvoke(result))
+                //    {
+                //        this.Cursor = Cursors.Default;
+                //        this.bnLoadModel.Enabled = true;
+                //    }
+                //});
+                //loading.IsBackground = true;
+                //loading.Start();
                 //GC.KeepAlive(modelType);
-                switch (modelType)
+                switch (paddlex.modelType)
                 {
                     case 0: tbModeltype.Text = "0：图像分类"; break;
                     case 1: tbModeltype.Text = "1：目标检测"; break;
                     case 2: tbModeltype.Text = "2：语义分割"; break;
+                }
+                if (paddlex.useGPU)
+                    tbModeltype.Text += " GPU";
+                else {
+                    tbModeltype.Text += " CPU";
                 }
                 bnStartDetection.Enabled = true;
                 //bnStopDetection.Enabled = true;
@@ -1062,34 +1033,45 @@ namespace PaddleXCsharp
         // 推理
         Bitmap resultShow;
         int n=0;
-        private Bitmap Inference(Bitmap bmp) 
+        private Bitmap Inference(ref Bitmap bmp) 
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             Bitmap bmpNew = bmp.Clone(new Rectangle(0, 0, bmp.Width, bmp.Height), bmp.PixelFormat);
             //Bitmap resultShow;
             Mat img = BitmapConverter.ToMat(bmpNew);
-
+            Graphics g = Graphics.FromImage(bmpNew);
+            SolidBrush brush = new SolidBrush(Color.White);
             int channel = Image.GetPixelFormatSize(bmp.PixelFormat) / 8;
-            //byte[] source = GetbyteData(bmp);
-            int stride;
-            byte[] source = GetBGRValues(bmp, out stride);
-            if (modelType == 0)
+            byte[] source = GetbyteData(bmp);
+            //int stride;
+            //byte[] source = GetBGRValues(bmp, out stride);
+            if (paddlex.modelType == 0)
             {
-                bool res = PaddlexClsPredict(model, source, bmp.Height, bmp.Width, channel, out int categoryID, out float score);
-                if(res)
+                bool res = PaddleX.PaddlexClsPredict(paddlex.model, source, bmp.Height, bmp.Width, channel, out int categoryID, out float score);
+                if(res && score > 0.9)
                 {
                     Scalar color = new Scalar(0, 0, 255); 
-                    string text = category[categoryID] + ": " + score.ToString("f2");
-                    OpenCvSharp.Size labelSize = Cv2.GetTextSize(text, HersheyFonts.HersheySimplex, 1, 1, out int baseline);
-                    Cv2.Rectangle(img, new OpenCvSharp.Point(0, 0), new OpenCvSharp.Point(labelSize.Width + 60, labelSize.Height + 20), color, -1, LineTypes.AntiAlias, 0);
-                    Cv2.PutText(img, text, new OpenCvSharp.Point(30, 30), HersheyFonts.HersheySimplex, 1, Scalar.White);
+                    string text = paddlex.category[categoryID] + ": " + score.ToString("f2");
+                    //OpenCvSharp.Size labelSize = Cv2.GetTextSize(text, HersheyFonts.HersheySimplex, 1, 1, out int baseline);
+                    //Cv2.Rectangle(img, new OpenCvSharp.Point(0, 0), new OpenCvSharp.Point(100,20), color, -1, LineTypes.AntiAlias);
+                    //Cv2.PutText(img, text, new OpenCvSharp.Point(5, 10), HersheyFonts.HersheySimplex, 0.5, Scalar.White);
+                    //resultShow = new Bitmap(img.Cols, img.Rows, (int)img.Step(), PixelFormat.Format24bppRgb, img.Data);
+                    //g = Graphics.FromImage(resultShow);
+                    Rectangle rect = new Rectangle(5, 5, 110, 12);
+                    g.FillRectangle(Brushes.Red, rect);
+                    Rectangle innerBounds = new Rectangle(rect.Left, rect.Top, rect.Width - 1, rect.Height - 1);
+                    g.DrawRectangle(Pens.Red, innerBounds);
+                    g.DrawString(text, this.Font, brush, new PointF(5, 5));
                 }
+                
             }
-            else if(modelType == 1)
+            else if(paddlex.modelType == 1)
             {
                 int max_box = 10;
                 bool res = false;
                 float[] result = new float[max_box * 6 +1];
-                res = PaddlexDetPredict(model, source, bmp.Height, bmp.Width, channel, max_box, result, visualize);
+                res = PaddleX.PaddlexDetPredict(paddlex.model, source, bmp.Height, bmp.Width, channel, max_box, result, paddlex.visualize);
                 if (res)
                 {
                     Scalar color = new Scalar(255, 0, 0);
@@ -1101,30 +1083,86 @@ namespace PaddleXCsharp
                         }
                         Rect rect = new Rect((int)result[6 * i + 3], (int)result[6 * i + 4], (int)result[6 * i + 5], (int)result[6 * i + 6]);
                         Cv2.Rectangle(img, rect, color, 1, LineTypes.AntiAlias);
-                        string text = category[(int)result[6 * i + 1]] + ":" + result[6 * i + 2].ToString("f2");
+                        string text = paddlex.category[(int)result[6 * i + 1]] + ":" + result[6 * i + 2].ToString("f2");
                         Cv2.PutText(img, text, new OpenCvSharp.Point((int)result[6 * i + 3], (int)result[6 * i + 4] - 5), HersheyFonts.HersheySimplex, 0.3, Scalar.Red);
-                        //DateTime now = DateTime.Now;
-                        //Cv2.PutText(img, now.ToString(), new OpenCvSharp.Point(5,5), HersheyFonts.HersheyComplex, 0.5, Scalar.Red);
-                        //Cv2.PutText(img, string.Format("ID:{0}", ++n),new OpenCvSharp.Point(5, this.pictureBox1.Height-200), HersheyFonts.HersheyComplex, 0.5, Scalar.Red);
+                        
+                        
                     }
                 }
                 else {
                     LogHelper.WriteLog("产品ID检测失败！");
                 }
             }
-            resultShow = new Bitmap(img.Cols, img.Rows, (int)img.Step(), PixelFormat.Format24bppRgb, img.Data);
+
+            stopwatch.Stop();
+
+
+            
+
+            DateTime now = DateTime.Now;
+            brush.Color = Color.Red;
+            g.DrawString(now.ToString("yyyy-MM-dd HH:mm:ss dddd"), this.Font, brush, new PointF(bmpNew.Width-120, bmpNew.Height - 15));
+            g.DrawString(string.Format("ID：{0}，耗时：{1}/ms",++n, stopwatch.ElapsedMilliseconds), this.Font, brush, new PointF(5, bmpNew.Height-15));
+            brush.Dispose();
+            g.Dispose();
+
             System.GC.Collect();
-            return resultShow;
+            return bmpNew;
         }
 
+        
         private void BnStartDetection_Click(object sender, EventArgs e)
         {
-            if (!isInference && model != IntPtr.Zero)
+            if (!paddlex.isInference && paddlex.model != IntPtr.Zero)
             {
                 bnLoadModel.Enabled = false;
                 bnStopDetection.Enabled = true;
                 bnStartDetection.Enabled = false;
-                isInference = true;
+                paddlex.isInference = true;
+                n = 0;
+
+                try
+                {
+
+                    //Bitmap outBitmap = Inference(Inbitmap);
+                    //if (outBitmap != null)
+                    //{
+                    //    pictureBox2.Image = outBitmap.Clone(new Rectangle(0, 0, outBitmap.Width, outBitmap.Height), outBitmap.PixelFormat); ;
+                    //}
+                    Task.Factory.StartNew(() =>
+                    {
+                        if (Paths != null)
+                        {
+                            Stopwatch stopwatch = new Stopwatch();
+                            stopwatch.Start();
+                            foreach (var item in Paths)
+                            {
+                                if (System.IO.File.Exists(item)&& paddlex.isInference)
+                                {
+                                    this.Invoke((EventHandler)(delegate
+                                    {
+                                        Inbitmap = new Bitmap(item);
+                                        Bitmap outBitmap = Inference(ref Inbitmap);
+                                        if (outBitmap != null)
+                                        {
+                                            pictureBox1.Image = outBitmap.Clone(new Rectangle(0, 0, outBitmap.Width, outBitmap.Height), outBitmap.PixelFormat); ;
+                                        }
+                                    }));
+
+                                }
+
+                            }
+                            stopwatch.Stop();
+                            MessageBox.Show("总耗时：" + stopwatch.ElapsedMilliseconds + "ms");
+                        }
+                    }
+                    );
+
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.Message);
+                }
             }
             else {
                 ShowMessage("检测失败！", "注意");
@@ -1137,12 +1175,12 @@ namespace PaddleXCsharp
             bnLoadModel.Enabled = true;
             bnStopDetection.Enabled = false;
             bnStartDetection.Enabled = true;
-            isInference = false;
+            paddlex.isInference = false;
         }
 
         private void BnThreshold_Click(object sender, EventArgs e)
         {
-            string path = modelPath + "/score_thresholds.yml";
+            string path = paddlex.modelPath + "/score_thresholds.yml";
             System.Diagnostics.Process.Start(path);
             ShowMessage("调整阈值后，请重新加载模型！", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
@@ -1159,7 +1197,7 @@ namespace PaddleXCsharp
                 System.Threading.Thread.Sleep(500);
             }
             this.Cursor = Cursors.Default;
-            FreeModelMemory(model); //释放model资源
+            PaddleX.FreeModelMemory(paddlex.model); //释放model资源
             System.Environment.Exit(0);
         }
 
@@ -1182,7 +1220,7 @@ namespace PaddleXCsharp
                 return;
             }
             string filename = System.Guid.NewGuid().ToString("N");
-            if (isInference && resultShow != null)
+            if (paddlex.isInference && resultShow != null)
             {
                 bool isExists = Learun.Util.DirFileHelper.IsExistDirectory(string.Format("{0}", ConfigurationManager.AppSettings["SaveImageDir"]));
                 if (!isExists)

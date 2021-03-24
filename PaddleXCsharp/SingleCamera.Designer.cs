@@ -74,7 +74,7 @@
             this.groupBox5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox5.Location = new System.Drawing.Point(971, 562);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(243, 183);
+            this.groupBox5.Size = new System.Drawing.Size(256, 183);
             this.groupBox5.TabIndex = 40;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "检测操作";
@@ -97,7 +97,7 @@
             this.tbModeltype.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbModeltype.Location = new System.Drawing.Point(131, 28);
             this.tbModeltype.Name = "tbModeltype";
-            this.tbModeltype.Size = new System.Drawing.Size(100, 23);
+            this.tbModeltype.Size = new System.Drawing.Size(125, 23);
             this.tbModeltype.TabIndex = 41;
             this.tbModeltype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
