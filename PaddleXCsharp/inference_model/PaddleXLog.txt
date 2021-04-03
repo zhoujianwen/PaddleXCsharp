@@ -83335,3 +83335,3615 @@ Enter PaddlexClsPredict.
 Cls result : category_id[2], score[0.999169].
 Enter PaddlexClsPredict.
 Cls result : category_id[1], score[0.999958].
+
+======== PaddleX Start ========
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.734833].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999627].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.985266].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.526649].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.990214].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997528].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999848].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.468758].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999980].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999794].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.870114].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999989].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998802].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.980267].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998829].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881570].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999920].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999950].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999118].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.410243].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999156].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.902971].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997112].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999596].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.889205].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.805852].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.961567].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999949].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.515789].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999968].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999782].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.977503].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996617].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999978].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.994828].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.988274].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.819777].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.931383].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.948348].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999956].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967511].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996402].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998076].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.843590].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999977].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999827].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999747].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999252].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999795].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999853].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967773].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.965243].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880573].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999630].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.958954].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.940414].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996527].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996220].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999899].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999804].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997915].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999333].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997587].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998952].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882665].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999891].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999903].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999906].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880199].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.994823].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999654].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999387].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999350].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999792].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880553].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.947148].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.971955].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999974].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.402512].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999918].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.911549].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.821409].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.879918].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.992718].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.544399].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999169].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999823].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.862336].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999764].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999976].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999637].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.961704].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.954065].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999973].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.968737].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999604].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999816].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.996433].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999689].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997400].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999675].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999965].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998046].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.996267].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999986].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999985].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999971].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999979].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997142].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998326].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.798825].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999988].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999776].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.859552].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882406].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.752185].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.996726].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998850].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999595].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999983].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.868868].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998970].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.983567].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.994751].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999944].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999732].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.879663].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.991525].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999357].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999917].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.982153].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997886].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.995817].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.982714].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999817].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998839].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.915499].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999475].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.992100].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998587].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999970].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.995805].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882616].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999855].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.997427].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.959466].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.992593].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.938568].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.990484].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999861].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999949].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999106].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.912838].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999914].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999983].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.970081].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998006].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999973].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999605].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999717].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.926058].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999278].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997318].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.994799].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.915932].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880988].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.995920].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.994160].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999910].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880423].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.995187].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999915].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.997486].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999949].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999931].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.680307].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880810].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.987471].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999714].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.759454].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.911002].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.842392].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882265].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999853].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.990908].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999886].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999513].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999614].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999984].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999380].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999936].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999924].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999141].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.995320].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.939179].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999926].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999932].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999461].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998802].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999982].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.970553].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999978].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999970].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.960014].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.742906].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.946049].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999723].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999849].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.962358].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998969].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999708].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.912548].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999486].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999899].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.931364].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.994551].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998298].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.546344].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999918].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.991845].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999971].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881506].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.996221].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.485214].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.859108].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.901950].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999978].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.995321].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.960155].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.693590].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999591].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.990104].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999876].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999953].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.834151].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997546].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999607].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.961241].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999872].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999887].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999944].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880696].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999906].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999985].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.976127].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.970686].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999709].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.998828].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999093].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.998340].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999759].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999828].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.879876].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999451].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999565].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.889353].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.763793].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998419].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.845913].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.995637].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999806].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999907].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.988314].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.993498].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999962].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999811].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.753220].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999900].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.994935].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997771].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999692].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999695].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999505].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999356].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996343].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999839].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999494].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880231].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.985165].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.787080].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999977].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.981110].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.723819].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.853747].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998625].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999870].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.992730].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.888500].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999966].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.995485].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.997481].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.998569].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996764].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.896230].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999883].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999983].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996485].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.984805].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998516].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999905].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996532].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.926356].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998693].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882513].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.998557].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.928294].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999481].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999004].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999961].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.559814].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.888157].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999432].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999976].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.748592].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999967].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999170].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999189].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880721].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999815].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999239].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998333].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.884742].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.594213].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.901893].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.872030].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999950].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.879685].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881728].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999970].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998422].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.953750].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.990612].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999984].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.362612].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999626].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999888].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.985905].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881022].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.694637].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996906].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997080].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.440954].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.463930].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.548230].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999169].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.986484].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.993888].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999982].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999804].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999984].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999178].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881349].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881174].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999974].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.864134].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.822853].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997794].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.997952].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999949].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.992693].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999937].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999858].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.947675].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.995916].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.998585].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999271].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999973].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999874].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999501].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999976].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999779].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.561208].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998161].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.531651].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999963].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999989].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.879148].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999451].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999435].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.998024].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.991106].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999938].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996075].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999957].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998334].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.875632].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.991546].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.752165].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999962].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.786842].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999983].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999819].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999862].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.940355].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.528141].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999812].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881271].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.984330].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.981938].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999962].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.776458].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.921109].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999343].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999831].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.991162].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.990020].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.994639].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.997782].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.437276].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999825].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999866].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.997270].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999972].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.976324].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999983].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999957].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999778].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.990612].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.930666].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999975].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.916390].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.998829].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999442].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999972].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999808].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997360].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999353].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999865].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999117].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999885].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.986158].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.997491].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.993811].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999767].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999986].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999942].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999875].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.974995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999828].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999367].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.998147].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.989417].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999977].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.932670].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996276].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.938293].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998500].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.619590].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882584].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.525281].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998388].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999182].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999980].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999980].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999695].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999988].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999843].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999723].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.948607].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999829].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999859].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.474114].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999962].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.985271].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999934].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999952].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996544].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.811862].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.970197].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.966701].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999982].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999986].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999870].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999901].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999908].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.868427].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999943].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999386].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.950237].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999986].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880692].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999220].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999920].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.973702].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.968735].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999975].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996314].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999978].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.989522].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999982].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999975].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999945].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.985285].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.460460].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.992870].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999903].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.992332].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999675].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999800].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.997560].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999972].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.913872].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.992463].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999903].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999648].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999931].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999902].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880839].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.766039].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999547].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.992693].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999152].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999646].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.574545].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.997193].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999858].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999971].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999944].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999740].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.936301].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999907].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999783].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.995402].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999967].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.917826].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999976].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.506662].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.996202].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999931].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999241].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.926861].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999756].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997615].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999931].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999819].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998586].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999798].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.731138].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.967264].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.990087].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.879792].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997259].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.926223].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.998268].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999907].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999492].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999608].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999961].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.993486].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.998834].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999918].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999941].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.905985].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999590].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999834].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.506493].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.970731].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999965].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999908].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998847].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999776].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999983].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999948].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880445].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.985175].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.992106].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.996943].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.995292].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999206].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.994505].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999226].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.923151].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.846499].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999516].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882284].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996133].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.451913].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996556].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.988901].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999013].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997334].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999984].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.998805].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999974].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999710].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999961].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.979726].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999906].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997869].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.640242].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.993635].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.997507].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.710016].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999945].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.997329].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999968].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.991304].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999988].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.892618].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996128].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999965].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.899925].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.996915].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.952766].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.998127].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.968568].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999844].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.982414].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999833].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.859847].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999808].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.955216].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.883858].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.945599].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999901].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997366].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.994689].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.969912].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999986].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.996894].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999970].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998801].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.937400].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999960].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.992118].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.998884].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.995135].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999695].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999243].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.594213].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999897].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999048].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.925027].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999954].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997817].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.687958].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.463060].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.985674].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999902].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.595786].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999172].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999770].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999290].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.697458].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.960435].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999904].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.990431].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.931244].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999889].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.878669].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999932].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.850237].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999691].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.990245].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.776271].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.996713].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.542916].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.957354].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997742].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.984707].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.996881].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998139].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.732055].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.988896].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999895].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997590].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999333].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999856].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999723].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.952639].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.752178].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.968434].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882619].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999959].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998657].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.927333].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999925].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.818229].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.992523].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.996386].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880558].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999947].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997573].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.916390].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997700].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.879878].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999180].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.992680].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.992402].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.942855].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882344].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999884].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999966].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998842].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.964773].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999828].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999591].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999731].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999719].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999968].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.854490].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999980].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.895743].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999957].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.990916].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999917].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.940834].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.992789].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999900].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999254].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999748].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999780].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997036].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.992367].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997886].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.742555].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.995667].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999988].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.950357].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999067].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999984].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.991442].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.893165].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.524906].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.886973].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.989238].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999874].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.834111].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.994583].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.935822].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.991051].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.955502].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999953].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.904007].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.993533].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.991169].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.550368].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999299].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999785].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999986].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.987954].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.921305].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.725881].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999908].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999580].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.929959].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999915].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.975561].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.492033].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.918539].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999792].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.812545].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999989].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999709].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.996800].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.885612].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.932482].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.994073].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999835].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.987429].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.906051].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999941].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.993151].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.906393].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.504518].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.613061].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.904040].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999982].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.993261].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999493].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.944453].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.950357].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999977].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.883230].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.992789].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997057].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998803].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.762177].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999730].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.991271].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.894301].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999179].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999534].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.944798].
+
+======== PaddleX Start ========
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.734833].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999627].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.985266].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.526649].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.990214].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997528].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999848].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.468758].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999980].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999794].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.870114].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999989].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998802].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.980267].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998829].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881570].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999920].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999950].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999118].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.410243].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999156].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.902971].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997112].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999596].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.889205].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.805852].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.961567].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999949].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.515789].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999968].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999782].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.977503].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996617].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999978].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.994828].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.988274].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.819777].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.931383].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.948348].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999956].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967511].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996402].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998076].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.843590].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999977].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999827].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999747].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999252].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999795].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999853].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967773].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.965243].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880573].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999630].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.958954].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.940414].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996527].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996220].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999899].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999804].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997915].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999333].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997587].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998952].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882665].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999891].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999903].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999906].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880199].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.994823].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999654].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999387].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.734833].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999627].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.985266].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.526649].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.990214].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997528].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999848].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.468758].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999980].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999794].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.870114].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999989].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998802].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.980267].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998829].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881570].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999920].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999950].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999118].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.410243].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999156].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.902971].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997112].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999596].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.889205].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.805852].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.961567].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999949].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.515789].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999968].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999782].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.977503].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996617].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999978].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.994828].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.988274].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.819777].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.931383].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.948348].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999956].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967511].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996402].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998076].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.843590].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999977].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999827].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999747].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999252].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999795].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999853].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967773].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.965243].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880573].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999630].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.958954].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.940414].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996527].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996220].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999899].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999804].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997915].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999333].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997587].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998952].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882665].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999891].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+
+======== PaddleX Start ========
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.734833].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999627].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.985266].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.526649].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.990214].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997528].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999848].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.468758].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999980].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999794].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.870114].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999989].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998802].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.980267].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998829].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881570].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999920].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999950].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999118].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.410243].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999156].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.902971].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997112].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999596].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.889205].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.805852].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.961567].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999949].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.515789].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999968].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999782].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.977503].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996617].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999978].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.994828].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.988274].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.819777].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.931383].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.948348].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999956].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967511].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996402].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998076].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.843590].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999977].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999827].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999747].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999252].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999795].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999853].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967773].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.965243].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880573].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999630].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.958954].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.940414].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996527].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996220].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999899].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999804].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997915].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999333].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997587].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998952].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882665].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999891].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999903].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999906].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880199].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.994823].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999654].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999387].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999350].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999792].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880553].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.947148].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.971955].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999974].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.402512].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999918].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.911549].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.821409].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.879918].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.992718].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.544399].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999169].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999823].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.862336].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999764].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999976].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999637].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.961704].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.954065].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999973].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.968737].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999604].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999816].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.734833].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999627].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.985266].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.526649].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.990214].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997528].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999848].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.468758].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999980].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999794].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.870114].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999989].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998802].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.980267].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998829].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.881570].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999920].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999749].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999950].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999118].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.410243].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999156].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.902971].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.997112].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999596].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.889205].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.805852].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.961567].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999949].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999993].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.515789].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999968].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999782].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.977503].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996617].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999978].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.994828].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.988274].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.819777].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.931383].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.948348].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999956].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967511].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996402].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998076].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.843590].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999977].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999827].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999747].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999252].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999795].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999853].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.967773].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.965243].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880573].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999630].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.958954].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.940414].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.996527].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.996220].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999899].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999804].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997915].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999333].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999990].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997587].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998952].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882665].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999891].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999903].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999906].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880199].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.994823].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999654].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999981].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999387].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999350].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999792].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.880553].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.947148].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.971955].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999974].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.402512].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999918].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.911549].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.821409].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.879918].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.992718].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.544399].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999169].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999958].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999823].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.862336].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999764].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999976].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999637].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.961704].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.954065].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999973].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.968737].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999604].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999816].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.996433].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999689].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997400].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999675].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999965].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998046].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.996267].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999987].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999986].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999985].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.999971].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999979].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.997142].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.998326].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.798825].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999988].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999999].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999776].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.859552].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.882406].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.752185].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.996726].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998850].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999595].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999992].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.999983].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999964].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.868868].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999998].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.998970].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.983567].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.994751].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999995].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999997].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999933].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[0.999994].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.999944].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999732].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.879663].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.991525].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999991].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999357].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999917].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.982153].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.997886].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.995817].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[0.982714].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[0], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[4], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999817].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[0.998839].
+Enter PaddlexClsPredict.
+Cls result : category_id[5], score[0.915499].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[3], score[0.999996].
+Enter PaddlexClsPredict.
+Cls result : category_id[1], score[1.000000].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.999475].
+Enter PaddlexClsPredict.
+Cls result : category_id[2], score[0.992100].

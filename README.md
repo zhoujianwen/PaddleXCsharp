@@ -33,8 +33,7 @@
 # 使用方法
 
 1. 将项目克隆（下载）至本地
-2. 使用PaddleXDll文件下内容，编译可供C#下调用的DLL（这里为大家提供一份编译好的DLL，[百度网盘链接](链接：https://pan.baidu.com/s/1N_2KXgmFeu4TybVhLKK65Q)
-提取码：abpf）
+2. 使用PaddleXDll文件下内容，编译可供C#下调用的DLL（这里为大家提供一份编译好的DLL，[百度网盘链接](链接：https://pan.baidu.com/s/1N_2KXgmFeu4TybVhLKK65Q) 提取码：abpf）
 3. 将DLL文件添加至C#bin文件下
 4. 安装[PaddleX](https://github.com/PaddlePaddle/PaddleX)，根据文档，训练出深度学习模型（注意，本demo仅支持PaddleX训练出的模型，不支持PaddlePaddle训练的模型）
 5. 连接相机，加载模型，启动测试
@@ -56,9 +55,7 @@
 
 为了方便测试，默认不调用相机，已禁用相机的代码
 
-![示例](./images/%E5%8D%95%E7%9B%B8%E6%9C%BA-%E7%9B%B8%E6%9C%BA%E6%93%8D%E4%BD%9C.gif)
-
-![示例](./images/%E5%8D%95%E7%9B%B8%E6%9C%BA-%E6%8E%A8%E7%90%86.gif)
+![示例](./images/test.gif)
 
 ## 多相机模式界面
 相机操作及推理
