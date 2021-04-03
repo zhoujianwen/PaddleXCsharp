@@ -1,4 +1,8 @@
-﻿# 背景
+﻿[PaddleXCsharp](https://github.com/LiKangyuLKY/PaddleXCsharp)开源项目
+
+关于C#端部署的问题 [#579](https://github.com/PaddlePaddle/PaddleX/issues/579)
+
+# 背景
 百度飞桨团队开发了一款全流程深度学习模型开发工具：[PaddleX](https://github.com/PaddlePaddle/PaddleX)，分为API版本和GUI版本。使用PaddleX可以低代码甚至零代码实现图像分类、目标检测、语义分割、实例分割等任务，非常适合于非计算机背景（如工业领域）的从业者完成深度学习开发。
 
 为了更便捷地与多类传感器和上位系统通信、工业领域内上位机软件常常用C#来开发，但深度学习本身以C++和Python为主。因此，本Demo的目标就是基于PaddleX，打通深度学习C#部署的最后一步。
@@ -29,7 +33,7 @@
 # 使用方法
 
 1. 将项目克隆（下载）至本地
-2. 使用PaddleXDll文件下内容，编译可供C#下调用的DLL（这里为大家提供一份编译好的DLL，[百度网盘链接](链接：https://pan.baidu.com/s/1N_2KXgmFeu4TybVhLKK65Q 
+2. 使用PaddleXDll文件下内容，编译可供C#下调用的DLL（这里为大家提供一份编译好的DLL，[百度网盘链接](链接：https://pan.baidu.com/s/1N_2KXgmFeu4TybVhLKK65Q)
 提取码：abpf）
 3. 将DLL文件添加至C#bin文件下
 4. 安装[PaddleX](https://github.com/PaddlePaddle/PaddleX)，根据文档，训练出深度学习模型（注意，本demo仅支持PaddleX训练出的模型，不支持PaddlePaddle训练的模型）
